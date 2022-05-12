@@ -1,48 +1,132 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
-a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+.u-dialog-section-5 {
+    min-height: 826px;
 }
 
-a {
-  color: #0077cc;
+
+    .u-dialog-section-5 .u-dialog-1 {
+        width: 725px;
+        min-height: 548px;
+        margin: 107px auto 60px;
+    }
+
+    .u-dialog-section-5 .u-container-layout-1 {
+        padding: 40px 30px;
+    }
+
+    .u-dialog-section-5 .u-text-1 {
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin: 36px auto 0;
+    }
+
+    .u-dialog-section-5 .u-form-1 {
+        height: 366px;
+        width: 483px;
+        margin: 50px auto 0;
+    }
+
+    .u-dialog-section-5 .u-form-group-1 {
+        width: 100%;
+    }
+
+    .u-dialog-section-5 .u-label-1 {
+        font-size: 1rem;
+    }
+
+    .u-dialog-section-5 .u-form-group-2 {
+        width: 100%;
+    }
+
+    .u-dialog-section-5 .u-label-2 {
+        font-size: 1rem;
+    }
+
+    .u-dialog-section-5 .u-form-group-3 {
+        width: 100%;
+    }
+
+    .u-dialog-section-5 .u-btn-1 {
+        padding-left: 60px;
+        padding-right: 60px;
+        background-image: none;
+        border-style: none;
+        text-transform: none;
+        width: 100%;
+    }
+
+    .u-dialog-section-5 .u-icon-1 {
+        width: 15px;
+        height: 15px;
+        left: auto;
+        top: 17px;
+        position: absolute;
+        right: 16px;
+    }
+
+@media (max-width: 1199px) {
+    .u-dialog-section-5 .u-dialog-1 {
+        width: 611px;
+        height: auto;
+        min-height: 461px;
+    }
+
+    .u-dialog-section-5 .u-text-1 {
+        width: auto;
+        margin-top: 23px;
+    }
+
+    .u-dialog-section-5 .u-form-1 {
+        height: 260px;
+        width: 471px;
+        margin-top: 23px;
+    }
 }
 
-.btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+@media (max-width: 991px) {
+    .u-dialog-section-5 .u-dialog-1 {
+        width: 611px;
+    }
+
+    .u-dialog-section-5 .u-container-layout-1 {
+        padding-bottom: 30px;
+    }
 }
 
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+@media (max-width: 767px) {
+    .u-dialog-section-5 .u-dialog-1 {
+        width: 540px;
+    }
+
+    .u-dialog-section-5 .u-container-layout-1 {
+        padding-top: 30px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
 }
 
-.border-top {
-  border-top: 1px solid #e5e5e5;
-}
-.border-bottom {
-  border-bottom: 1px solid #e5e5e5;
-}
+@media (max-width: 575px) {
+    .u-dialog-section-5 .u-dialog-1 {
+        width: 340px;
+    }
 
-.box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
-}
+    .u-dialog-section-5 .u-container-layout-1 {
+        padding-top: 40px;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
 
-button.accept-policy {
-  font-size: 1rem;
-  line-height: inherit;
-}
+    .u-dialog-section-5 .u-text-1 {
+        font-size: 2.125rem;
+    }
 
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px;
+    .u-dialog-section-5 .u-form-1 {
+        height: 152px;
+        margin-right: initial;
+        margin-left: initial;
+        width: auto;
+    }
 }
