@@ -6,16 +6,36 @@ namespace parking_project.Controllers;
 
 public class HomeController : Controller
 {
-    private readonly ILogger<HomeController> _logger;
+    private readonly ProjectParkingJARSContext _context;
 
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController(ProjectParkingJARSContext context)
     {
-        _logger = logger;
+        _context = context;
     }
 
     public IActionResult Index()
     {
         return View();
+    }
+    
+    public IActionResult GetUsers(string username, string password)
+    {
+        var user = _context.staff.Where(x => x.Username == username && x.Password == password);
+
+        if (user.Any())
+        {
+            if (user.Where(x => x.Username == username && x.Password == password).Any())
+            {
+                return Json(new { status = true, message = "Welcome" });
+            }
+            else
+            {
+                return Json(new { status = false, message = "Incorrect password" });
+            }
+        } else
+        {
+            return Json(new { status = false, message = "Incorrect username" });
+        }
     }
 
     public IActionResult Privacy()
