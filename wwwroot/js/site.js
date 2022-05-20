@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
-    $('').focus();
+    $('#username').focus();
 
-    $('').on('click', function () {
+    $('#signinBtn').on('click', function () {
         if ($('#username').val() != "" & $('#passwrd').val() != "" {
             Validate($('#username').val(), $('#passwrd').val());
         } else {

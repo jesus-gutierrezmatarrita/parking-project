@@ -438,6 +438,9 @@
       },
       "Microsoft.Owin/4.2.2": {
         "type": "package",
+        "dependencies": {
+          "Owin": "1.0.0"
+        },
         "compile": {
           "lib/net45/Microsoft.Owin.dll": {}
         },
@@ -447,6 +450,10 @@
       },
       "Microsoft.Owin.Host.SystemWeb/4.2.2": {
         "type": "package",
+        "dependencies": {
+          "Microsoft.Owin": "4.2.2",
+          "Owin": "1.0.0"
+        },
         "compile": {
           "lib/net45/Microsoft.Owin.Host.SystemWeb.dll": {}
         },
@@ -7331,26 +7338,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jesus\\.nuget\\packages\\": {}
+    "/home/jesus/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jesus\\Source\\Repos\\jesus-gutierrezmatarrita\\parking-project\\parking-project.csproj",
+      "projectUniqueName": "/home/jesus/Documents/UCR/Informática Empresarial/Lenguajes para Aplicaciones Comerciales/Projects/parking-project/parking-project.csproj",
       "projectName": "parking-project",
-      "projectPath": "C:\\Users\\jesus\\Source\\Repos\\jesus-gutierrezmatarrita\\parking-project\\parking-project.csproj",
-      "packagesPath": "C:\\Users\\jesus\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jesus\\Source\\Repos\\jesus-gutierrezmatarrita\\parking-project\\obj\\",
+      "projectPath": "/home/jesus/Documents/UCR/Informática Empresarial/Lenguajes para Aplicaciones Comerciales/Projects/parking-project/parking-project.csproj",
+      "packagesPath": "/home/jesus/.nuget/packages/",
+      "outputPath": "/home/jesus/Documents/UCR/Informática Empresarial/Lenguajes para Aplicaciones Comerciales/Projects/parking-project/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\jesus\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/home/jesus/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -7422,7 +7427,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.300/RuntimeIdentifierGraph.json"
       }
     }
   },
