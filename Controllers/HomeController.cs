@@ -8,9 +8,9 @@ public class HomeController : Controller
 {
     private readonly ProjectParkingJARSContext _context;
 
-    public HomeController()
+    public HomeController(ProjectParkingJARSContext context)
     {
-
+        _context = context;
     }
 
     public IActionResult Index()
