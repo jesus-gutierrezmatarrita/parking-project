@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿$(document).ready(function () {
     $('#username').focus();
 
@@ -49,3 +50,9 @@
         });
     }
 });
+=======
+﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+// for details on configuring this project to bundle and minify static web assets.
+
+// Write your JavaScript code.
+>>>>>>> bfd3be86c6e2bcaa83fa27d7704316fc62e35e8a
