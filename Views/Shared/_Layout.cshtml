@@ -1,254 +1,711 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - parking_project</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/parking_project.styles.css" asp-append-version="true" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-    <meta name="keywords" content="Welcome!, Log In">
-    <meta name="description" content="">
-    <meta name="page_type" content="np-template-header-footer-from-plugin">
-    <title>Home</title>
-    <link rel="stylesheet" href="~/css/page.css" media="screen">
-<link rel="stylesheet" href="~/css/Home.css" media="screen">
-    <script class="u-script" type="text/javascript" src="~/lib/jquery/dist/jquery-1.9.1.min.js" defer=""></script>
-    <script class="u-script" type="text/javascript" src="~/lib/jquery/dist/site.js" defer=""></script>
-    <meta name="generator" content="">
-    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
-    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster:400|Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+     <title>Parking RAJS</title>
 
-    
-    
-    <script type="application/ld+json">{
-		"logo": "/images/Capture1.png"
-}</script>
-    <meta name="theme-color" content="#478ac9">
-    <meta property="og:title" content="Home">
-    <meta property="og:type" content="website">
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+     <link rel="stylesheet" href="css/font-awesome.min.css">
+     <link rel="stylesheet" href="css/owl.carousel.css">
+     <link rel="stylesheet" href="css/owl.theme.default.min.css">
+      
+     <!-- MAIN CSS -->
+     <link rel="stylesheet" href="css/Home.css">
 
 </head>
-  <body class="u-body u-xl-mode"><header class="u-clearfix u-custom-color-1 u-header u-header" id="sec-650b"><div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xs u-sheet-1">
-        <a href="#" class="u-image u-logo u-image-1" data-image-width="313" data-image-height="235">
-          <img src="/images/Capture1.png" class="u-logo-image u-logo-image-1">
-        </a>
-        <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
-          <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
-            <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
-              <svg class="u-svg-link" viewBox="0 0 24 24"><use xlink:href="#menu-hamburger"></use></svg>
-              <svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
-</g></svg>
-            </a>
-          </div>
-          <div class="u-nav-container">
-            <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="//Home.html" style="padding: 10px 20px;">Home</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="//About.html" style="padding: 10px 20px;">About</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="//Contact.html" style="padding: 10px 20px;">Contact</a>
-</li></ul>
-          </div>
-          <div class="u-nav-container-collapse">
-            <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
-              <div class="u-inner-container-layout u-sidenav-overflow">
-                <div class="u-menu-close"></div>
-                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" >Home</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" >About</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" >Contact</a>
-</li></ul>
-              </div>
-            </div>
-            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
-          </div>
-        </nav>
-      </div></header>
-    <section class="u-align-center u-clearfix u-gradient u-section-1" id="sec-6bd7">
-      <div class="u-clearfix u-sheet u-valign-middle-xl u-sheet-1">
-        <div class="u-clearfix u-expanded-width-xl u-gutter-0 u-layout-wrap u-layout-wrap-1">
-          <div class="u-layout" style="">
-            <div class="u-layout-row" style="">
-              <div class="u-align-left u-container-style u-image u-layout-cell u-left-cell u-size-30 u-size-xs-60 u-image-1" src="" data-image-width="564" data-image-height="751">
-                <div class="u-container-layout u-valign-middle u-container-layout-1" src=""></div>
-              </div>
-              <div class="u-align-left u-container-style u-custom-color-1 u-dialog-link u-layout-cell u-right-cell u-size-30 u-size-xs-60 u-layout-cell-2" data-href="#sec-1b01">
-                <div class="u-container-layout u-container-layout-2">
-                  <h1 class="u-align-center u-custom-font u-font-lobster u-text u-text-palette-4-dark-1 u-title u-text-1">Welcome!</h1>
-                  <h2 class="u-custom-font u-font-raleway u-text u-text-2">Log In</h2>
-                  <div class="u-form u-form-1">
-                    <form action="" method="POST" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="email" name="form" style="padding: 10px;">
-                      <input type="hidden" id="siteId" name="siteId" value="1955046">
-                      <input type="hidden" id="pageId" name="pageId" value="1955056">
-                      <div class="u-form-group">
-                        <label for="email-f3eb" class="u-label">Username</label>
-                        <input type="text" id="email-f3eb" name="text" class="u-black u-border-1 u-border-grey-30 u-input u-input-rectangle" required="required" placeholder="Username">
-                      </div>
-                      <div class="u-form-group u-form-name">
-                        <label for="name-f3eb" class="u-label">Password</label>
-                        <input type="text" placeholder="Password" id="name-f3eb" name="password" class="u-black u-border-1 u-border-grey-30 u-input u-input-rectangle" required="">
-                      </div>
-                      <div class="u-align-right u-form-group u-form-submit">
-                        <a href="#" class="u-border-2 u-border-black u-btn u-btn-submit u-button-style u-hover-black u-none u-text-black u-text-hover-white u-btn-1">Sign In<br>
-                        </a>
-                        <input type="submit" value="submit" class="u-form-control-hidden">
-                      </div>
-                      
-                    </form>
-                  </div>
 
-                  <a role="button" class="button" data-toggle="modal" data-target="#modalSign">Sign Up</a>
-                  <p class="u-text u-text-default u-text-3"> Don't have an account?</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+<div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+</div>
 
-    <!-- Modal Sign Up-->
-                    <div class="modal fade" id="modalSign" role="dialog" aria-hidden="true" tabindex="-1">
+<body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+
+     <!-- PRE LOADER -->
+     <section class="preloader">
+          <div class="spinner">
+
+               <span class="spinner-rotate"></span>
+               
+          </div>
+     </section>
+
+
+     <!-- MENU -->
+     <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
+          <div class="container">
+
+               <div class="navbar-header">
+                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                    </button>
+
+                    <!-- lOGO TEXT HERE -->
+                    <a href="#" class="navbar-brand">Parking RAJS</a>
+               </div>
+
+               <!-- MENU LINKS -->
+               <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-nav-first">
+                         <li><a href="#top" class="smoothScroll">Home</a></li>
+                         <li><a href="#options" class="smoothScroll">Options</a></li>
+                         <li><a href="#footer" class="smoothScroll">Contact</a></li>
+                         <li><a class="smoothScroll" type="button" role="button" data-target="#modalClientSignIn" data-toggle="modal">Sign In</a></li>
+                         <li><a class="smoothScroll" type="button" role="button" data-target="#modalClient" data-toggle="modal">Sign Up</a></li>
+                    </ul>
+               </div>
+
+          </div>
+     </section>
+
+
+     <!-- HOME -->
+     <section id="home">
+        <div class="row">
+
+                    <div class="owl-carousel owl-theme home-slider">
+                         <div class="item item-first">
+                              <div class="caption">
+                                   <div class="container">
+                                        <div class="col-md-6 col-sm-12">
+                                             <h1>Parking</h1>
+                                             <h3>that adjusts to preference.</h3>
+                                             <a href="#options" class="section-btn btn btn-default smoothScroll">Reserve now</a>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+
+                         <div class="item item-second">
+                              <div class="caption">
+                                   <div class="container">
+                                        <div class="col-md-6 col-sm-12">
+                                             <h1>Service</h1>
+                                             <h3>with all the comforts.</h3>
+                                             <a href="#options" class="section-btn btn btn-default smoothScroll">Reserve now</a>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+
+                         <div class="item item-third">
+                              <div class="caption">
+                                   <div class="container">
+                                        <div class="col-md-6 col-sm-12">
+                                             <h1>High security</h1>
+                                             <h3>in all our parking lots.</h3>
+                                             <a href="#options" class="section-btn btn btn-default smoothScroll">Reserve now</a>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+          </div>
+     </section>
+
+     <!-- Modal SIGN IN -->
+     <div class="modal fade" id="modalClientSignIn" role="dialog" aria-hidden="true" tabindex="-1">
                         <div class="modal-dialog">
                             <div class="modal-content">
+
                                 <!-- Modal Header -->
                                 <div class="modal-header" >
-                                    <h3 id="myModalLabel">Sign Up</h3>
+                                    <h3 id="myModalLabel">SIGN IN</h3>
                                 </div> 
 
                                 <!-- Modal Body -->
-                                    <div class="modal-body">
-                                        <form action="" id="formSignUp">
+
+                                
+                                   <div class="modal-body">
+                                        <form action="" id="formSignIn">
                                              <div class="form-group">
+                                                <label>Username</label>
                                                 <input type="text" name="name" id="name" class="form-control" required="">
                                              </div>
                                              <div class="form-group">
-                                                <input type="email" name="email" id="email" class="form-control" required="">
+                                                <label>Password</label>
+                                                <input type="password" name="password" id="password" class="form-control" required="">
                                              </div>
-                                             <div class="form-group">
-                                                <input type="text" name="password" id="password" class="form-control" required="">
-                                             </div>
-                                             <div class="form-group">
-                                                <button type="submit" class="btn btn-success" onsubmit="" id="form-submit-signup">Sign Up</button>
-                                                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
-                                             </div>
+                                         
                                         </form>
                                    </div>
 
                                 <!-- Modal Footer-->
 
+                                 <div class="modal-footer">
+                                     <button type="submit" class="btn btn-success" onsubmit="" id="">Sign In</button>
+                                     <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                                 </div>
+
                             </div>
                         </div> 
                     </div>
-                    <!-- Modal Sign Up-->
+                    <!-- Modal SIGN IN -->
 
-    <section class="u-align-center u-clearfix u-grey-80 u-section-2" id="sec-f932">
-      <div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xs u-sheet-1">
-        <h2 class="u-custom-font u-font-montserrat u-text u-text-default u-text-palette-4-base u-text-1">Parking RAJS</h2>
-        <p class="u-custom-font u-font-raleway u-text u-text-default u-text-2">Different options that guarantee comfort and safety for your vehicle.</p>
-        <div class="u-expanded-width u-list u-list-1">
-          <div class="u-repeater u-repeater-1">
-            <div class="u-align-center u-container-style u-grey-90 u-list-item u-repeater-item u-video-cover u-list-item-1">
-              <div class="u-container-layout u-similar-container u-container-layout-1"><span class="u-file-icon u-icon u-text-palette-4-base u-icon-1"><img src="/images/1.png" alt=""></span>
-                <h4 class="u-custom-font u-font-montserrat u-text u-text-default u-text-3">Parking</h4>
-                <a href="" class="u-border-none u-btn u-button-style u-hover-palette-1-dark-1 u-palette-4-light-2 u-btn-1">Here</a>
-              </div>
-            </div>
-            <div class="u-align-center u-container-style u-grey-90 u-list-item u-repeater-item u-video-cover u-list-item-2">
-              <div class="u-container-layout u-similar-container u-container-layout-2"><span class="u-file-icon u-icon u-text-palette-4-base u-icon-2"><img src="/images/2.png" alt=""></span>
-                <h4 class="u-custom-font u-font-montserrat u-text u-text-default u-text-4">Prices</h4>
-                <a href="" class="u-border-none u-btn u-button-style u-hover-palette-1-dark-1 u-palette-4-light-2 u-btn-2">Here</a>
-              </div>
-            </div>
-            <div class="u-align-center u-container-style u-grey-90 u-list-item u-repeater-item u-video-cover u-list-item-3">
-              <div class="u-container-layout u-similar-container u-container-layout-3"><span class="u-file-icon u-icon u-text-palette-4-base u-icon-3"><img src="/images/3.png" alt=""></span>
-                <h4 class="u-custom-font u-font-montserrat u-text u-text-default u-text-5">Reserves</h4>
-                <a href="" class="u-border-none u-btn u-button-style u-hover-palette-1-dark-1 u-palette-4-light-2 u-btn-3">Here</a>
-              </div>
-            </div>
-            <div class="u-align-center u-container-style u-grey-90 u-list-item u-repeater-item u-video-cover u-list-item-4">
-              <div class="u-container-layout u-similar-container u-container-layout-4"><span class="u-file-icon u-icon u-text-palette-4-base u-icon-4"><img src="/images/4.png" alt=""></span>
-                <h4 class="u-custom-font u-font-montserrat u-text u-text-default u-text-6">My Profile</h4>
-                <a href="" class="u-border-none u-btn u-button-style u-hover-palette-1-dark-1 u-palette-4-light-2 u-btn-4">Here</a>
-              </div>
-            </div>
+     <!-- Modal SIGN UP -->
+     <div class="modal fade" id="modalClient" role="dialog" aria-hidden="true" tabindex="-1">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+
+                                <!-- Modal Header -->
+                                <div class="modal-header" >
+                                    <h3 id="myModalLabel">SIGN UP</h3>
+                                </div> 
+
+                                <!-- Modal Body -->
+
+                                
+                                   <div class="modal-body">
+                                        <form action="" id="formSignUp">
+                                             <div class="form-group">
+                                                <label>Full Name</label>
+                                                <input type="text" name="nameClient" id="nameClient" class="form-control" required="">
+                                             </div>
+                                             <div class="form-group">
+                                                <label>Email</label>
+                                                <input type="email" name="emailClient" id="emailClient" class="form-control" required="">
+                                             </div>
+                                             <div class="form-group">
+                                                <label>Password</label>
+                                                <input type="password" name="passwordClient" id="passwordClient" class="form-control" required="">
+                                             </div>
+                                             
+                                        </form>
+                                   </div>
+
+                                <!-- Modal Footer-->
+
+                                <div class="modal-footer">
+                                    <button type="submit" class="btn btn-success" onsubmit="" id="">Sign Up</button>
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                                </div>
+
+                            </div>
+                        </div> 
+                    </div>
+                    <!-- Modal SIGN UP -->
+
+    <!-- OPTIONS -->
+     <section id="options">
+          <div class="container">
+
+              <br></br><h2>In this section you can check the available spaces in each of our parking lots, as well as rates and reservations.</h2>
+           
+              <div class="row">
+
+                    <div class="col-xs-3">
+                         <div id="square">
+                              <img src=~/images/1.png/>
+                              <h3>Parking</h3>
+                              <a class="btn" id="here" href="#parking">Here</a>
+                         </div>
+                    </div>
+
+                    <div class="col-xs-3">
+                         <div id="square">
+                              <img src=~/images/2.png/>
+                              <h3>Prices</h3>
+                              <a class="btn" id="here" href="#prices">Here</a>
+                         </div>
+                    </div>
+
+                    <div class="col-xs-3">
+                         <div id="square">
+                              <img src=~/images/3.png/>
+                              <h3>Reserves</h3>
+                              <a class="btn" id="here" href="#reserves">Here</a>
+                         </div>
+                    </div>
+
+                    <div class="col-xs-3">
+                         <div id="square">
+                              <img src=~/images/4.png/>
+                              <h3>My Profile</h3>
+                              <a class="btn" id="here" data-target="#modalProfile" data-toggle="modal">Here</a>
+                         </div>
+                    </div>
+
+               </div>
           </div>
-        </div>
-        <div class="u-carousel u-expanded-width u-gallery u-gallery-slider u-layout-carousel u-lightbox u-no-transition u-show-text-on-hover u-gallery-1" data-interval="5000" data-u-ride="carousel" id="carousel-baf5">
-          <ol class="u-absolute-hcenter u-carousel-indicators u-carousel-indicators-1">
-            <li data-u-target="#carousel-baf5" data-u-slide-to="0" class="u-active u-grey-70 u-shape-circle" style="width: 10px; height: 10px;"></li>
-            <li data-u-target="#carousel-baf5" data-u-slide-to="1" class="u-grey-70 u-shape-circle" style="width: 10px; height: 10px;"></li>
-          </ol>
-          <div class="u-carousel-inner u-gallery-inner" role="listbox">
-            <div class="u-active u-carousel-item u-effect-fade u-gallery-item u-carousel-item-1">
-              <div class="u-back-slide" data-image-width="563" data-image-height="376">
-                <img class="u-back-image u-expanded u-back-image-1" src="/images/par1.jpg">
-              </div>
-              <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-1">
-                <h3 class="u-custom-font u-font-montserrat u-gallery-heading">Indoor Parking</h3>
-                <p class="u-gallery-text"></p>
-              </div>
+     </section>
+
+
+
+     <!-- PARKING -->
+    <section id="parking">
+        <div class="container">
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div class="d-flex align-items-center mb-5">
+                        <h1>
+                            Select your space
+                        </h1>
+                        <!-- CHOOSE THE PARKING'S LOCATION -->
+                        <h2>Choose the location of your preference</h2>
+                        <p>Location:</p>
+                        <select>
+                            <option>1</option>
+                            <option>1</option>
+                            <option>1</option>
+                        </select>
+                    </div>
+                    <div class="mb-5">
+                        <span>
+                            <i></i>
+                            <small class="ml-2 text-secondary">Available</small>
+                        </span>
+                        <span>
+                            <i></i>
+                            <small class="ml-2 text-secondary">Not available</small>
+                        </span>
+                        <span>
+                            <i></i>
+                            <small class="ml-2 text-secondary">Selected</small>
+                        </span>
+                        <span>
+                            <i></i>
+                            <small class="ml-2 text-secondary">Preferential space</small>
+                        </span>
+                    </div>
+                    <div>
+                        <div>
+                            <div>
+                                <div class="row mb-1">
+                                    <span class="seat" onclick="take(); return false">
+                                        <i class="fa-solid fa-car"></i>
+                                    </span>
+                                    <span class="seat" onclick="take(); return false">
+                                        <i class="fa-solid fa-car"></i>
+                                    </span>
+                                    <span class="seat" onclick="take(); return false">
+                                        <i class="fa-solid fa-car"></i>
+                                    </span>
+                                    <span class="seat" onclick="take(); return false">
+                                        <i class="fa-solid fa-car"></i>
+                                    </span>
+                                    <span class="seat" onclick="take(); return false">
+                                        <i class="fa-solid fa-car"></i>
+                                    </span>
+                                    <span class="seat" onclick="take(); return false">
+                                        <i class="fa-solid fa-car"></i>
+                                    </span>
+                                    <span class="seat">
+                                        <i class="fa-solid fa-car"></i>
+                                    </span>
+                                    <span class="seat">
+                                        <i class="fa-solid fa-car"></i>
+                                    </span>
+                                    <span class="seat">
+                                        <i class="fa-solid fa-car"></i>
+                                    </span>
+                                    <span class="seat">
+                                        <i class="fa-solid fa-car"></i>
+                                    </span>
+                                    <span class="seat">
+                                        <i class="fa-solid fa-car"></i>
+                                    </span>
+                                    <span class="seat">
+                                        <i class="fa-solid fa-car"></i>
+                                    </span>
+                                    <span class="seat">
+                                        <i class="fa-solid fa-car"></i>
+                                    </span>
+                                    <span class="seat">
+                                        <i class="fa-solid fa-car"></i>
+                                    </span>
+                                    <span class="seat">
+                                        <i class="fa-solid fa-car"></i>
+                                    </span>
+                                </div>
+                                <div class="row mb-1">
+                                    <span class="seat">
+                                        <i class="fa-solid fa-car"></i>
+                                    </span>
+                                    <span class="seat">
+                                        <i class="fa-solid fa-car"></i>
+                                    </span>
+                                    <span class="seat">
+                                        <i class="fa-solid fa-car"></i>
+                                    </span>
+                                    <span class="seat">
+                                        <i class="fa-solid fa-car"></i>
+                                    </span>
+                                    <span class="seat">
+                                        <i class="fa-solid fa-car"></i>
+                                    </span>
+                                    <span class="seat">
+                                        <i class="fa-solid fa-car"></i>
+                                    </span>
+                                    <span class="seat">
+                                        <i class="fa-solid fa-car"></i>
+                                    </span>
+                                    <span class="seat">
+                                        <i class="fa-solid fa-car"></i>
+                                    </span>
+                                    <span class="seat">
+                                        <i class="fa-solid fa-car"></i>
+                                    </span>
+                                    <span class="seat">
+                                        <i class="fa-solid fa-car"></i>
+                                    </span>
+                                    <span class="seat">
+                                        <i class="fa-solid fa-car"></i>
+                                    </span>
+                                    <span class="seat">
+                                        <i class="fa-solid fa-car"></i>
+                                    </span>
+                                    <span class="seat">
+                                        <i class="fa-solid fa-car"></i>
+                                    </span>
+                                    <span class="seat">
+                                        <i class="fa-solid fa-car"></i>
+                                    </span>
+                                    <span class="seat">
+                                        <i class="fa-solid fa-car"></i>
+                                    </span>
+                                </div>
+                                <div class="row mb-1">
+                                    <span class="seat">
+                                        <i class="fa-solid fa-car"></i>
+                                    </span>
+                                    <span class="seat">
+                                        <i class="fa-solid fa-car"></i>
+                                    </span>
+                                    <span class="seat">
+                                        <i class="fa-solid fa-car"></i>
+                                    </span>
+                                    <span class="seat">
+                                        <i class="fa-solid fa-car"></i>
+                                    </span>
+                                    <span class="seat">
+                                        <i class="fa-solid fa-car"></i>
+                                    </span>
+                                    <span class="seat">
+                                        <i class="fa-solid fa-car"></i>
+                                    </span>
+                                    <span class="seat">
+                                        <i class="fa-solid fa-car"></i>
+                                    </span>
+                                    <span class="seat">
+                                        <i class="fa-solid fa-car"></i>
+                                    </span>
+                                    <span class="seat">
+                                        <i class="fa-solid fa-car"></i>
+                                    </span>
+                                    <span class="seat">
+                                        <i class="fa-solid fa-car"></i>
+                                    </span>
+                                    <span class="seat">
+                                        <i class="fa-solid fa-car"></i>
+                                    </span>
+                                    <span class="seat">
+                                        <i class="fa-solid fa-car"></i>
+                                    </span>
+                                    <span class="seat">
+                                        <i class="fa-solid fa-car"></i>
+                                    </span>
+                                    <span class="seat">
+                                        <i class="fa-solid fa-car"></i>
+                                    </span>
+                                    <span class="seat">
+                                        <i class="fa-solid fa-car"></i>
+                                    </span>
+                                </div>
+                                <div class="row mb-1">
+                                    <span class="seat">
+                                        <i class="fa-solid fa-car"></i>
+                                    </span>
+                                    <span class="seat">
+                                        <i class="fa-solid fa-car"></i>
+                                    </span>
+                                    <span class="seat">
+                                        <i class="fa-solid fa-car"></i>
+                                    </span>
+                                    <span class="seat">
+                                        <i class="fa-solid fa-car"></i>
+                                    </span>
+                                    <span class="seat">
+                                        <i class="fa-solid fa-car"></i>
+                                    </span>
+                                    <span class="seat">
+                                        <i class="fa-solid fa-car"></i>
+                                    </span>
+                                    <span class="seat">
+                                        <i class="fa-solid fa-car"></i>
+                                    </span>
+                                    <span class="seat">
+                                        <i class="fa-solid fa-car"></i>
+                                    </span>
+                                    <span class="seat">
+                                        <i class="fa-solid fa-car"></i>
+                                    </span>
+                                    <span class="seat">
+                                        <i class="fa-solid fa-car"></i>
+                                    </span>
+                                    <span class="seat">
+                                        <i class="fa-solid fa-car"></i>
+                                    </span>
+                                    <span class="seat">
+                                        <i class="fa-solid fa-car"></i>
+                                    </span>
+                                    <span class="seat">
+                                        <i class="fa-solid fa-car"></i>
+                                    </span>
+                                    <span class="seat">
+                                        <i class="fa-solid fa-car"></i>
+                                    </span>
+                                    <span class="seat">
+                                        <i class="fa-solid fa-car"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-            <div class="u-carousel-item u-effect-fade u-gallery-item u-carousel-item-2">
-              <div class="u-back-slide u-back-slide-2" data-image-width="508" data-image-height="315">
-                <img src="/images/par2.jpg" alt="Outdoor parking" data-image-width="2000" data-image-height="1333" class="u-back-image u-expanded u-back-image-2">
-              </div>
-              <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-2">
-                <h3 class="u-custom-font u-font-montserrat u-gallery-heading">Outdoor Parking</h3>
-                <p class="u-gallery-text"></p>
-              </div>
-            </div>
-          </div>
-          <a class="u-absolute-vcenter u-carousel-control u-carousel-control-prev u-grey-70 u-icon-circle u-opacity u-opacity-70 u-spacing-10 u-text-white u-carousel-control-1" href="#carousel-baf5" role="button" data-u-slide="prev">
-            <span aria-hidden="true">
-              <svg viewBox="0 0 451.847 451.847"><path d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0
-c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744
-c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z"></path></svg>
-            </span>
-            <span class="sr-only">
-              <svg viewBox="0 0 451.847 451.847"><path d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0
-c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744
-c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z"></path></svg>
-            </span>
-          </a>
-          <a class="u-absolute-vcenter u-carousel-control u-carousel-control-next u-grey-70 u-icon-circle u-opacity u-opacity-70 u-spacing-10 u-text-white u-carousel-control-2" href="#carousel-baf5" role="button" data-u-slide="next">
-            <span aria-hidden="true">
-              <svg viewBox="0 0 451.846 451.847"><path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
-L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
-c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"></path></svg>
-            </span>
-            <span class="sr-only">
-              <svg viewBox="0 0 451.846 451.847"><path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
-L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
-c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"></path></svg>
-            </span>
-          </a>
         </div>
-      </div>
     </section>
 
+      <!-- PRICES -->
+     <section id="prices">
+          <div class="container">
+
+              <br></br><h2>In this section you can check the reservation rates for hours and days or contract a weekly, monthly or annual plan.</h2>
+           
+              <div class="row">
+
+                    <div class="col-xs-3">
+                         <div id="square">
+                              <img src=~/images/reloj-de-arena.png/>
+                              <h3>Hour</h3>
+                              <a>$4</a>
+                         </div>
+                    </div>
+
+                    <div class="col-xs-3">
+                         <div id="square">
+                              <img src=~/images/simbolo-de-dolar.png/>
+                              <h3>Day</h3>
+                              <a>$10</a>
+                         </div>
+                    </div>
+
+                    <div class="col-xs-3">
+                         <div id="square">
+                              <img src=~/images/calendar.png/>
+                              <h3>Contract</h3>
+                              <a>Weekly $65</a>
+                              <a>Monthly $255</a>
+                              <a>Annual $599</a>
+                         </div>
+                    </div>
+
+                    <div class="col-xs-3">
+                         <div id="square">
+                              <img src=~/images/riqueza.png/>
+                              <h3>Calculator</h3>
+                              <a class="btn" id="here" data-target="#modalCalculate" data-toggle="modal">Calculate</a>
+                         </div>
+                    </div>
+
+               </div>
+          </div>
+     </section>
+
+     <!-- Modal CALCULATE -->
+     <div class="modal fade" id="modalCalculate" role="dialog" aria-hidden="true" tabindex="-1">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+
+                                <!-- Modal Header -->
+                                <div class="modal-header" >
+                                    <h3 id="myModalLabel">CALCULATE</h3>
+                                </div> 
+
+                                <!-- Modal Body -->
+
+                                
+                                   <div class="modal-body">
+                                        <form action="" id="calcu">
+                                             <div class="form-group">
+                                                <input type="number" name="" id="numberCalculate" required="">
+                                                <div class="dropdown">
+                                                  <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown">
+                                                  <span class="caret"></span></button>
+                                                  <ul class="dropdown-menu">
+                                                    <li><a href="#">Hour</a></li>
+                                                    <li><a href="#">Day</a></li>
+                                                    <li><a href="#">Weekly</a></li>
+                                                    <li><a href="#">Monthly</a></li>
+                                                    <li><a href="#">Annual</a></li>
+                                                  </ul>
+                                                </div>
+                                             </div>
+                                         
+                                        </form>
+                                   </div>
+
+                                <!-- Modal Footer-->
+
+                                 <div class="modal-footer">
+                                     <button type="submit" class="btn btn-info" onsubmit="" id="">Calculate</button>
+                                     <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                                 </div>
+
+                            </div>
+                        </div> 
+                    </div>
+                    <!-- Modal CALCULATE -->
+
+      <!-- RESERVES -->
+     <section id="reserves">
+          <div class="container">
+               <div class="row">
+                   <div class="section-title">
+                              <h2>My Reserves</h2>
+                     </div>
+
+                     <div class="col-md-12 col-sm-12">
+
+                        <div class="table-responsive">
+                     
+                            <table class="table table-bordered table-hover" id="reserves-table"> 
+
+                                <thead>
+
+                                    <tr>
+
+                                        <th>
+                                            ID
+                                        </th>
+                                         <th>
+                                             Vehicle ID
+                                        </th>
+                                         <th>
+                                             Date
+                                        </th>
+                                        <th>
+                                             Details
+                                        </th>
+                                         <th>
+                                             Action
+                                        </th>
+
+
+                                    </tr>
+
+                                </thead>
+
+                                <tbody id="reserves-tbody">
+
+                                </tbody>
+
+                            </table>
+                        </div>
+                     </div>
+             </div>
+          </div>
+     </section>
+
+     <!-- Modal PROFILE -->
+     <div class="modal fade" id="modalProfile" role="dialog" aria-hidden="true" tabindex="-1">
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                            <div class="modal-content">
+
+                                <!-- Modal Header -->
+                                <div class="modal-header" >
+                                    <h3 id="myModalLabel">MY PROFILE</h3>
+                                </div> 
+
+                                <!-- Modal Body -->
+
+                                
+                                   <div class="modal-body">
+                                        <form action="" id="">
+                                             <div class="form-group">
+                                                 <!-- Datos de la BD -->
+                                                <label>Full Name</label>
+                                             </div>
+                                             <div class="form-group">
+                                                <label>Email</label>
+                                             </div>
+                                             <div class="form-group">
+                                                <label>Password</label>
+                                             </div>
+                                             
+                                        </form>
+                                   </div>
+
+                                <!-- Modal Footer-->
+
+                                <div class="modal-footer">
+                                    <button type="button" data-dismiss="modal">Sign Out</button>
+                                </div>
+
+                            </div>
+                        </div> 
+                    </div>
+                    <!-- Modal PROFILE -->
+
+     <!-- FOOTER -->
+     <footer id="footer">
+          <div class="container">
+               <div class="row">
+
+                   <div class="col-md-4 col-sm-12">
+                         <div class="footer-info newsletter-form">
+                              <div class="section-title">
+                                   <img id="logoimg" src="~/images/Capture1.png"></img>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                         <div class="footer-info">
+                              <div class="section-title">
+                                   <h2>Contact Info</h2>
+                              </div>
+                              <address>
+                                   <p>+(506) 1800 1100</p>
+                                   <p><a>parking@rajsgmail.com</a></p>
+                              </address>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                         <div class="footer-info" >
+                              <div class="copyright-text"> 
+                                   <p>Copyright &copy; 2022 Parking RAJS</p>
+                              </div>
+                         </div>
+                    </div>
+                    
+               </div>
+          </div>
+     </footer>
+
+
+     <!-- SCRIPTS -->
+     <script src="js/jquery.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+     <script src="js/owl.carousel.min.js"></script>
+     <script src="js/smoothscroll.js"></script>
+     <script src="js/custom.js"></script>
+     <script src="js/site.js"></script>
+     <script src="bootstrap.bundle.min.js"></script>
     
 
-    <footer class="u-align-center u-clearfix u-custom-color-1 u-footer u-footer" id="sec-1296"><div class="u-align-left u-clearfix u-sheet u-sheet-1">
-        <a href="#" class="u-image u-logo u-image-1" data-image-width="308" data-image-height="186">
-          <img src="/images/Capture1-10.png" class="u-logo-image u-logo-image-1">
-        </a>
-        <a href="#" class="u-active-none u-bottom-left-radius-0 u-bottom-right-radius-0 u-btn u-btn-rectangle u-button-style u-hover-none u-none u-radius-0 u-top-left-radius-0 u-top-right-radius-0 u-btn-1"><span class="u-icon"><svg class="u-svg-content" viewBox="0 0 405.333 405.333" x="0px" y="0px" style="width: 1em; height: 1em;"><path d="M373.333,266.88c-25.003,0-49.493-3.904-72.704-11.563c-11.328-3.904-24.192-0.896-31.637,6.699l-46.016,34.752    c-52.8-28.181-86.592-61.952-114.389-114.368l33.813-44.928c8.512-8.512,11.563-20.971,7.915-32.64    C142.592,81.472,138.667,56.96,138.667,32c0-17.643-14.357-32-32-32H32C14.357,0,0,14.357,0,32    c0,205.845,167.488,373.333,373.333,373.333c17.643,0,32-14.357,32-32V298.88C405.333,281.237,390.976,266.88,373.333,266.88z"></path></svg><img></span>&nbsp;+1(506) 567-8910
-        </a>
-      </div>
-    </footer>
-   
-<div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
-  
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
 
-    @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
