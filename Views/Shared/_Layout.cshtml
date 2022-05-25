@@ -1,0 +1,485 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+
+     <title>Parking RAJS</title>
+
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+     <link rel="stylesheet" href="css/font-awesome.min.css">
+     <link rel="stylesheet" href="css/owl.carousel.css">
+     <link rel="stylesheet" href="css/owl.theme.default.min.css">
+      
+     <!-- MAIN CSS -->
+     <link rel="stylesheet" href="css/Home.css">
+
+</head>
+
+<div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+</div>
+
+<body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+
+     <!-- PRE LOADER -->
+     <section class="preloader">
+          <div class="spinner">
+
+               <span class="spinner-rotate"></span>
+               
+          </div>
+     </section>
+
+
+     <!-- MENU -->
+     <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
+          <div class="container">
+
+               <div class="navbar-header">
+                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                    </button>
+
+                    <!-- lOGO TEXT HERE -->
+                    <a href="#" class="navbar-brand">Parking RAJS</a>
+               </div>
+
+               <!-- MENU LINKS -->
+               <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-nav-first">
+                         <li><a href="#top" class="smoothScroll">Home</a></li>
+                         <li><a href="#options" class="smoothScroll">Options</a></li>
+                         <li><a href="#footer" class="smoothScroll">Contact</a></li>
+                         <li><a class="smoothScroll" type="button" role="button" data-target="#modalClientSignIn" data-toggle="modal">Sign In</a></li>
+                         <li><a class="smoothScroll" type="button" role="button" data-target="#modalClient" data-toggle="modal">Sign Up</a></li>
+                    </ul>
+               </div>
+
+          </div>
+     </section>
+
+
+     <!-- HOME -->
+     <section id="home">
+        <div class="row">
+
+                    <div class="owl-carousel owl-theme home-slider">
+                         <div class="item item-first">
+                              <div class="caption">
+                                   <div class="container">
+                                        <div class="col-md-6 col-sm-12">
+                                             <h1>Parking</h1>
+                                             <h3>that adjusts to preference.</h3>
+                                             <a href="#options" class="section-btn btn btn-default smoothScroll">Reserve now</a>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+
+                         <div class="item item-second">
+                              <div class="caption">
+                                   <div class="container">
+                                        <div class="col-md-6 col-sm-12">
+                                             <h1>Service</h1>
+                                             <h3>with all the comforts.</h3>
+                                             <a href="#options" class="section-btn btn btn-default smoothScroll">Reserve now</a>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+
+                         <div class="item item-third">
+                              <div class="caption">
+                                   <div class="container">
+                                        <div class="col-md-6 col-sm-12">
+                                             <h1>High security</h1>
+                                             <h3>in all our parking lots.</h3>
+                                             <a href="#options" class="section-btn btn btn-default smoothScroll">Reserve now</a>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+          </div>
+     </section>
+
+     <!-- Modal SIGN IN -->
+     <div class="modal fade" id="modalClientSignIn" role="dialog" aria-hidden="true" tabindex="-1">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+
+                                <!-- Modal Header -->
+                                <div class="modal-header" >
+                                    <h3 id="myModalLabel">SIGN IN</h3>
+                                </div> 
+
+                                <!-- Modal Body -->
+
+                                
+                                   <div class="modal-body">
+                                        <form action="" id="formSignIn">
+                                             <div class="form-group">
+                                                <label>Username</label>
+                                                <input type="text" name="name" id="name" class="form-control" required="">
+                                             </div>
+                                             <div class="form-group">
+                                                <label>Password</label>
+                                                <input type="password" name="password" id="password" class="form-control" required="">
+                                             </div>
+                                         
+                                        </form>
+                                   </div>
+
+                                <!-- Modal Footer-->
+
+                                 <div class="modal-footer">
+                                     <button type="submit" class="btn btn-success" onsubmit="" id="">Sign In</button>
+                                     <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                                 </div>
+
+                            </div>
+                        </div> 
+                    </div>
+                    <!-- Modal SIGN IN -->
+
+     <!-- Modal SIGN UP -->
+     <div class="modal fade" id="modalClient" role="dialog" aria-hidden="true" tabindex="-1">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+
+                                <!-- Modal Header -->
+                                <div class="modal-header" >
+                                    <h3 id="myModalLabel">SIGN UP</h3>
+                                </div> 
+
+                                <!-- Modal Body -->
+
+                                
+                                   <div class="modal-body">
+                                        <form action="" id="formSignUp">
+                                             <div class="form-group">
+                                                <label>Full Name</label>
+                                                <input type="text" name="nameClient" id="nameClient" class="form-control" required="">
+                                             </div>
+                                             <div class="form-group">
+                                                <label>Email</label>
+                                                <input type="email" name="emailClient" id="emailClient" class="form-control" required="">
+                                             </div>
+                                             <div class="form-group">
+                                                <label>Password</label>
+                                                <input type="password" name="passwordClient" id="passwordClient" class="form-control" required="">
+                                             </div>
+                                             
+                                        </form>
+                                   </div>
+
+                                <!-- Modal Footer-->
+
+                                <div class="modal-footer">
+                                    <button type="submit" class="btn btn-success" onsubmit="" id="">Sign Up</button>
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                                </div>
+
+                            </div>
+                        </div> 
+                    </div>
+                    <!-- Modal SIGN UP -->
+
+    <!-- OPTIONS -->
+     <section id="options">
+          <div class="container">
+
+              <br></br><h2>In this section you can check the available spaces in each of our parking lots, as well as rates and reservations.</h2>
+           
+              <div class="row">
+
+                    <div class="col-xs-3">
+                         <div id="square">
+                              <img src=~/images/1.png/>
+                              <h3>Parking</h3>
+                              <a class="btn" id="here" href="#parking">Here</a>
+                         </div>
+                    </div>
+
+                    <div class="col-xs-3">
+                         <div id="square">
+                              <img src=~/images/2.png/>
+                              <h3>Prices</h3>
+                              <a class="btn" id="here" href="#prices">Here</a>
+                         </div>
+                    </div>
+
+                    <div class="col-xs-3">
+                         <div id="square">
+                              <img src=~/images/3.png/>
+                              <h3>Reserves</h3>
+                              <a class="btn" id="here" href="#reserves">Here</a>
+                         </div>
+                    </div>
+
+                    <div class="col-xs-3">
+                         <div id="square">
+                              <img src=~/images/4.png/>
+                              <h3>My Profile</h3>
+                              <a class="btn" id="here" data-target="#modalProfile" data-toggle="modal">Here</a>
+                         </div>
+                    </div>
+
+               </div>
+          </div>
+     </section>
+
+
+
+     <!-- PARKING -->
+     <section id="parking">
+          <div class="container">
+               <div class="row">
+                   <!-- JESUUUUUUSSSSSSS -->
+                   <h1>AGREGAR JESUUSS</h1>
+             </div>
+          </div>
+     </section>
+
+      <!-- PRICES -->
+     <section id="prices">
+          <div class="container">
+
+              <br></br><h2>In this section you can check the reservation rates for hours and days or contract a weekly, monthly or annual plan.</h2>
+           
+              <div class="row">
+
+                    <div class="col-xs-3">
+                         <div id="square">
+                              <img src=~/images/reloj-de-arena.png/>
+                              <h3>Hour</h3>
+                              <a>$4</a>
+                         </div>
+                    </div>
+
+                    <div class="col-xs-3">
+                         <div id="square">
+                              <img src=~/images/simbolo-de-dolar.png/>
+                              <h3>Day</h3>
+                              <a>$10</a>
+                         </div>
+                    </div>
+
+                    <div class="col-xs-3">
+                         <div id="square">
+                              <img src=~/images/calendar.png/>
+                              <h3>Contract</h3>
+                              <a>Weekly $65</a>
+                              <a>Monthly $255</a>
+                              <a>Annual $599</a>
+                         </div>
+                    </div>
+
+                    <div class="col-xs-3">
+                         <div id="square">
+                              <img src=~/images/riqueza.png/>
+                              <h3>Calculator</h3>
+                              <a class="btn" id="here" data-target="#modalCalculate" data-toggle="modal">Calculate</a>
+                         </div>
+                    </div>
+
+               </div>
+          </div>
+     </section>
+
+     <!-- Modal CALCULATE -->
+     <div class="modal fade" id="modalCalculate" role="dialog" aria-hidden="true" tabindex="-1">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+
+                                <!-- Modal Header -->
+                                <div class="modal-header" >
+                                    <h3 id="myModalLabel">CALCULATE</h3>
+                                </div> 
+
+                                <!-- Modal Body -->
+
+                                
+                                   <div class="modal-body">
+                                        <form action="" id="calcu">
+                                             <div class="form-group">
+                                                <input type="number" name="" id="numberCalculate" required="">
+                                                <div class="dropdown">
+                                                  <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown">
+                                                  <span class="caret"></span></button>
+                                                  <ul class="dropdown-menu">
+                                                    <li><a href="#">Hour</a></li>
+                                                    <li><a href="#">Day</a></li>
+                                                    <li><a href="#">Weekly</a></li>
+                                                    <li><a href="#">Monthly</a></li>
+                                                    <li><a href="#">Annual</a></li>
+                                                  </ul>
+                                                </div>
+                                             </div>
+                                         
+                                        </form>
+                                   </div>
+
+                                <!-- Modal Footer-->
+
+                                 <div class="modal-footer">
+                                     <button type="submit" class="btn btn-info" onsubmit="" id="">Calculate</button>
+                                     <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                                 </div>
+
+                            </div>
+                        </div> 
+                    </div>
+                    <!-- Modal CALCULATE -->
+
+      <!-- RESERVES -->
+     <section id="reserves">
+          <div class="container">
+               <div class="row">
+                   <div class="section-title">
+                              <h2>My Reserves</h2>
+                     </div>
+
+                     <div class="col-md-12 col-sm-12">
+
+                        <div class="table-responsive">
+                     
+                            <table class="table table-bordered table-hover" id="reserves-table"> 
+
+                                <thead>
+
+                                    <tr>
+
+                                        <th>
+                                            ID
+                                        </th>
+                                         <th>
+                                             Vehicle ID
+                                        </th>
+                                         <th>
+                                             Date
+                                        </th>
+                                        <th>
+                                             Details
+                                        </th>
+                                         <th>
+                                             Action
+                                        </th>
+
+
+                                    </tr>
+
+                                </thead>
+
+                                <tbody id="reserves-tbody">
+
+                                </tbody>
+
+                            </table>
+                        </div>
+                     </div>
+             </div>
+          </div>
+     </section>
+
+     <!-- Modal PROFILE -->
+     <div class="modal fade" id="modalProfile" role="dialog" aria-hidden="true" tabindex="-1">
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                            <div class="modal-content">
+
+                                <!-- Modal Header -->
+                                <div class="modal-header" >
+                                    <h3 id="myModalLabel">MY PROFILE</h3>
+                                </div> 
+
+                                <!-- Modal Body -->
+
+                                
+                                   <div class="modal-body">
+                                        <form action="" id="">
+                                             <div class="form-group">
+                                                 <!-- Datos de la BD -->
+                                                <label>Full Name</label>
+                                             </div>
+                                             <div class="form-group">
+                                                <label>Email</label>
+                                             </div>
+                                             <div class="form-group">
+                                                <label>Password</label>
+                                             </div>
+                                             
+                                        </form>
+                                   </div>
+
+                                <!-- Modal Footer-->
+
+                                <div class="modal-footer">
+                                    <button type="button" data-dismiss="modal">Sign Out</button>
+                                </div>
+
+                            </div>
+                        </div> 
+                    </div>
+                    <!-- Modal PROFILE -->
+
+     <!-- FOOTER -->
+     <footer id="footer">
+          <div class="container">
+               <div class="row">
+
+                   <div class="col-md-4 col-sm-12">
+                         <div class="footer-info newsletter-form">
+                              <div class="section-title">
+                                   <img id="logoimg" src="~/images/Capture1.png"></img>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                         <div class="footer-info">
+                              <div class="section-title">
+                                   <h2>Contact Info</h2>
+                              </div>
+                              <address>
+                                   <p>+(506) 1800 1100</p>
+                                   <p><a>parking@rajsgmail.com</a></p>
+                              </address>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                         <div class="footer-info" >
+                              <div class="copyright-text"> 
+                                   <p>Copyright &copy; 2022 Parking RAJS</p>
+                              </div>
+                         </div>
+                    </div>
+                    
+               </div>
+          </div>
+     </footer>
+
+
+     <!-- SCRIPTS -->
+     <script src="js/jquery.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+     <script src="js/owl.carousel.min.js"></script>
+     <script src="js/smoothscroll.js"></script>
+     <script src="js/custom.js"></script>
+     <script src="js/site.js"></script>
+     <script src="bootstrap.bundle.min.js"></script>
+    
+
+
+</body>
+</html>
