@@ -162,7 +162,7 @@ input, button,
     }
 
     .custom-navbar .navbar-nav.navbar-nav-first {
-        margin-left: 30em;
+        margin-left: 39em;
     }
 
     .custom-navbar .navbar-nav.navbar-right li a {
@@ -302,6 +302,31 @@ input, button,
 .form-control {
     width: 250px;
     background-color: transparent;
+
+}
+
+.form-group label {
+    color: cadetblue;
+}
+
+#myModalLabel {
+    color:aquamarine;
+}
+
+
+#modalProfile {
+    /*background: linear-gradient(black, #41807c);*/
+    margin-top: 140px;
+}
+
+#calcu .form-group 
+{
+    display: flex;
+    align-items: center;
+}
+
+#numberCalculate {
+    height: 34px;
 }
 
 /*---------------------------------------
@@ -317,12 +342,53 @@ input, button,
 
 
 #square {
-    background-color: black;
+    background-color: #141414;
     height: 350px;
     width: 250px;
     padding: 25%;
     margin: 20px;
 }
+
+    #square h3 {
+        margin-left: 10px;
+    }
+
+/*---------------------------------------
+      PARKING             
+  -----------------------------------------*/
+
+#parking {
+    width:861px;
+    height: 700px;
+    padding: 5%;
+}
+
+/*---------------------------------------
+      RESERVES            
+  -----------------------------------------*/
+
+#reserves {
+    width: 861px;
+    height: 650px;
+    padding: 7%;
+}
+
+/*---------------------------------------
+      PRICES            
+  -----------------------------------------*/
+
+#prices {
+    padding: 5%;
+}
+
+/*
+#calculate {
+    background-color: transparent;
+    color: aquamarine;
+    width: 75px;
+    border-color:aquamarine;
+}
+*/
 
 
 /*---------------------------------------
