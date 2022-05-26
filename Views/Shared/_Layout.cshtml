@@ -143,7 +143,7 @@
                                 <!-- Modal Footer-->
 
                                  <div class="modal-footer">
-                                     <button type="submit" class="btn btn-success" onsubmit="" id="">Sign In</button>
+                                     <button type="submit" class="btn btn-success" onsubmit="return Add();" id="Sign Up">Sign In</button>
                                      <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
                                  </div>
 
@@ -167,13 +167,30 @@
                                 
                                    <div class="modal-body">
                                         <form action="" id="formSignUp">
+
+                                             
+                                             
+
                                              <div class="form-group">
                                                 <label>Full Name</label>
                                                 <input type="text" name="nameClient" id="nameClient" class="form-control" required="">
                                              </div>
+
+                                             
+
                                              <div class="form-group">
-                                                <label>Email</label>
+                                                <label>Last Name</label>
+                                                <input type="lastName" name="lastNameClient" id="lastNameClient" class="form-control" required="">
+                                             </div>
+
+                                            <div class="form-group">
+                                              <label>Email</label>
                                                 <input type="email" name="emailClient" id="emailClient" class="form-control" required="">
+                                             </div>
+
+                                             <div class="form-group">
+                                                <label>Phone</label>
+                                                <input type="phone" name="phoneClient" id="phoneClient" class="form-control" required="">
                                              </div>
                                              <div class="form-group">
                                                 <label>Password</label>
@@ -186,10 +203,9 @@
                                 <!-- Modal Footer-->
 
                                 <div class="modal-footer">
-                                    <button type="submit" class="btn btn-success" onsubmit="" id="">Sign Up</button>
+                                    <button type="submit" class="btn btn-success" onsubmit="return Add();" id="form-submit">Sign Up</button>
                                     <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
                                 </div>
-
                             </div>
                         </div> 
                     </div>
@@ -702,7 +718,7 @@
      <script src="js/owl.carousel.min.js"></script>
      <script src="js/smoothscroll.js"></script>
      <script src="js/custom.js"></script>
-     <script src="js/site.js"></script>
+     <script src="js/Customer.js"></script>
      <script src="bootstrap.bundle.min.js"></script>
     
 
