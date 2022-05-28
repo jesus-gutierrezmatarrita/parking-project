@@ -1,36 +1,62 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using parking_project.Models;
-using parking_project.Models.Data;
+// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace parking_project.Controllers
 {
-    public class CustomerController : Controller
+   
+    public class CustomersController : ControllerBase
     {
-
-        private readonly ILogger<CustomerController> _logger;
-        private readonly IConfiguration _configuration;
-        CustomerDao customerDAO;
-
-        public CustomerController(ILogger<CustomerController> logger, IConfiguration configuration)
+        // GET: api/<CustomersController>
+        [HttpGet]
+        public IEnumerable<string> Get()
         {
-            _logger = logger;
-            _configuration = configuration;
-            //TODO:instantiate studentDAO only once here
-
+            return new string[] { "value1", "value2" };
         }
 
-        public IActionResult Index()
+        // GET api/<CustomersController>/5
+        [HttpGet("{id}")]
+        public string Get(int id)
         {
-            return View();
+            return "value";
         }
 
-        public IActionResult Insert([FromBody] Customer customer)
+        [HttpPost]
+        public IActionResult Post([FromBody] Customer customer)
         {
+            
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri("https://localhost:7034/api/");
 
-                customerDAO = new CustomerDao(_configuration);
-                int resultToReturn = customerDAO.Insert(customer);
-                return Ok(resultToReturn);
-          
+                var postTask = client.PostAsJsonAsync("customers", customer);
+                postTask.Wait();
+
+                var result = postTask.Result;
+
+                if (result.IsSuccessStatusCode)
+                {
+                    return new JsonResult(result);
+                    // TODO: return new JsonResult(student);
+                }
+                else
+                {
+                    // TODO should be customized to meet the client's needs
+                    return new JsonResult(result);
+                }
             }
         }
+
+        // PUT api/<CustomersController>/5
+        [HttpPut("{id}")]
+        public void Put(int id, [FromBody] string value)
+        {
+        }
+
+        // DELETE api/<CustomersController>/5
+        [HttpDelete("{id}")]
+        public void Delete(int id)
+        {
+        }
+    }
 }
