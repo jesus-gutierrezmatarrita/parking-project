@@ -15,16 +15,15 @@ namespace parking_project.Models
 
         public Customer()
         {
-            Vehicle = new Vehicle();
+            
         }
 
-        public Customer(int id, string name, string lastname, string password, Vehicle vehicle, string email, int phone)
+        public Customer(int id, string name, string lastname, string password,  string email, int phone)
         {
             this.Id = id;
             this.Name = name;
             this.Lastname = lastname;
             this.Password = password;
-            this.Vehicle = vehicle;
             this.Email = email;
             this.Phone = phone;
         }

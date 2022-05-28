@@ -1,11 +1,13 @@
 ﻿using System.Data.SqlClient;
-
+using parking_project.Models;
 namespace parking_project.Models.Data
 {
     public class CustomerDao
     {
         private readonly IConfiguration _configuration;
         string connectionString;
+
+      
 
         public CustomerDao(IConfiguration configuration)
         {
@@ -48,6 +50,64 @@ namespace parking_project.Models.Data
             return resultToReturn;
 
         }
+        public List<Customer> Get()
+        {
+
+            List<Customer> customers = new List<Customer>();
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+
+                connection.Open();
+                SqlCommand command = new SqlCommand("GetAllCustomer", connection);
+                command.CommandType = System.Data.CommandType.StoredProcedure;
+
+                SqlDataReader sqlDataReader = command.ExecuteReader();
+                while (sqlDataReader.Read())
+                {
+                    
+                    customers.Add(new Customer
+                    {
+                        Id = Convert.ToInt32(sqlDataReader["Id"]),
+                        Name = sqlDataReader["Name"].ToString(),
+                        Lastname = sqlDataReader["Lastname"].ToString(),
+                        Email = sqlDataReader["Email"].ToString(),
+                        Phone = Convert.ToInt32(sqlDataReader["Phone"].ToString()),
+                       
+                    });
+
+                }
+
+                connection.Close();
+
+                return customers;
+
+            }
+            public int Delete(int Id)
+            {
+                int resultToReturn;
+                Exception? exception = new Exception();
+                try
+                {
+                    using (SqlConnection connection = new SqlConnection(connectionString))
+                    {
+                        connection.Open();
+                        SqlCommand command = new SqlCommand("DeleteStudent", connection);
+                        command.CommandType = System.Data.CommandType.StoredProcedure;
+                        command.Parameters.AddWithValue("@Id", Id);
+                        resultToReturn = command.ExecuteNonQuery();
+                        connection.Close();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    exception = ex;
+                    throw exception;
+                }
+                return resultToReturn;
+            }
+
+        }
+
 
 
     }

@@ -1,34 +1,16 @@
-<<<<<<< HEAD
+
 
 ﻿$(document).ready(function () {
      
 
 
     
-
-             Add();
-         
-         return false;
-     });
-     
-function Add() {
-=======
->>>>>>> parent of 1627a7d (Fixed some bugs within the controller)
-
-﻿$(document).ready(function () {
-     
-
-
-    
-
-             Add();
+     LoadCustomers();
          
          return false;
      });
      
 
-    
-    });
 
    
 
@@ -73,102 +55,40 @@ function Add() {
          }
 
 
-     }
+}
 
-    function Validate(user, pass) {
-        var record = {
-            userName: user,
-            password: pass
-        };
+function LoadCustomers() {
 
-        $.ajax({
-<<<<<<< HEAD
-            url: "/Customer/Insert",
-            data: JSON.stringify(customer), //converte la variable estudiante en tipo json
-            type: "POST",
-            contentType: "application/json;charset=utf-8",
-            dataType: "json",
-            success: function (result) {
+    $.ajax({
+        url: "/Customer/Get",
+        type: "GET",
+        contentType: "application/json;charset=utf-8",
+        dataType: "json",
+        success: function (result) {
 
-                // alert("resultado: "+result);
-                $('#nameClient').val('');
-                $('#lastNameClient').val('');
-                $('#email').val('');
-                $('#passwordClient').val('');
-                $('#phoneClient').val('');
-=======
-            url: '/Users/GetUsers',
-            async: false,
-            type: 'POST',
-            data: record,
-            beforeSend: function (xhr, opts) {
->>>>>>> parent of 1627a7d (Fixed some bugs within the controller)
-            },
-            complete: function () {
-            },
-            success: function (data) {
-                if (data.status == true) {
-                    window.location.href = "/Home/Index";
-                } else if (data.status == false) {
-                    Swal.fire(
-                        'Error',
-                        data.message,
-                        'error'
-                    );
-                }
-<<<<<<< HEAD
-                $('#nameClient').val('');
-                $('#lastNameClient').val('');
-                $('#email').val('');
-                $('#passwordClient').val('');
-                $('#phoneClient').val('');
-            }
-        });
 
-    }
+            var html = '';
+            $.each(result, function (key, item) {
 
+                html += '<tr>';
+                html += '<td>' + item.id + '</td>';
+                html += '<td>' + item.name + '</td>';
+                html += '<td>' + item.lastname + '</td>';
+                html += '<td>' + item.email + '</td>';
+                html += '<td>' + item.phone + '</td>';
+                html += '</tr>';
+            });
+
+            $('#client-tbody').html(html);
+            $(document).ready(function () {
+                $('#client-table');
+            });
+        },
+        error: function (errorMessage) {
+            // alert("Error");
+            alert(errorMessage.responseText);
+        }
+    });
 
 }
 
-    function Validate(user, pass) {
-        var record = {
-            userName: user,
-            password: pass
-        };
-
-        $.ajax({
-            url: '/Users/GetUsers',
-            async: false,
-            type: 'POST',
-            data: record,
-            beforeSend: function (xhr, opts) {
-            },
-            complete: function () {
-            },
-            success: function (data) {
-                if (data.status == true) {
-                    window.location.href = "/Home/Index";
-                } else if (data.status == false) {
-                    Swal.fire(
-                        'Error',
-                        data.message,
-                        'error'
-                    );
-                }
-=======
->>>>>>> parent of 1627a7d (Fixed some bugs within the controller)
-            },
-            error: function (data) {
-                Swal.fire(
-                    'Error',
-                    data.message,
-                    'error'
-                );
-            }
-        });
-<<<<<<< HEAD
-    }
-=======
-    }
-
->>>>>>> parent of 1627a7d (Fixed some bugs within the controller)
