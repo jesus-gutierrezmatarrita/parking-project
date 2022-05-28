@@ -137,6 +137,15 @@ input, button,
     margin-top: 15px;
 }
 
+#hereAdmin {
+    border-color: #4f9f9a;
+    background-color: transparent;
+    color: #4f9f9a;
+    width: 90px;
+    height: 30px;
+    border-radius: 6px;
+}
+
 /*---------------------------------------
       MENU              
   -----------------------------------------*/
@@ -218,12 +227,13 @@ input, button,
             border-color: transparent;
         }
 
-
-
+.a .dropdown-item {
+    background: #41807c;
+    color: #ffffff;
+}
 /*---------------------------------------
       HOME             
   -----------------------------------------*/
-
 #home {
     padding: 0;
     background: linear-gradient(black, #41807c);
@@ -489,6 +499,26 @@ footer {
     height: 130px;
 }
 
+
+/*---------------------------------------
+     ADMIN              
+  -----------------------------------------*/
+
+
+
+#squareAdmin {
+    background-color: #141414;
+    height: 150px;
+    width: 150px;
+    border-radius: 50px;
+    padding-left: 9%;
+    padding-top: 9%;
+    margin-bottom:10px;
+}
+
+    #squareAdmin h3 {
+        margin-left: 3px;
+    }
 
 /*---------------------------------------
      RESPONSIVE STYLES              

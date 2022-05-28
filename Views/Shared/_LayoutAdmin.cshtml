@@ -1,0 +1,445 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Parking RAJS</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="css/Home.css">
+
+</head>
+
+<div class="container">
+    <main role="main" class="pb-3">
+        @RenderBody()
+    </main>
+</div>
+
+<body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+
+    <!-- PRE LOADER -->
+    <section class="preloader">
+        <div class="spinner">
+
+            <span class="spinner-rotate"></span>
+
+        </div>
+    </section>
+
+
+    <!-- MENU -->
+    <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
+        <div class="container">
+
+            <div class="navbar-header">
+                <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+                </button>
+
+                <!-- lOGO TEXT HERE -->
+                <a href="#" class="navbar-brand">Parking RAJS</a>
+            </div>
+
+            <!-- MENU LINKS -->
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-nav-first">
+                    <li><a href="#top" class="smoothScroll">Home</a></li>
+                    <li><a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" id="dropdownMenuLink" aria-haspopup="true" aria-expanded="false">
+                        Add
+                    </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item"  data-target="#modalParking" data-toggle="modal">Parking</a>
+                                <a class="dropdown-item"  data-target="#modalUser" data-toggle="modal">User</a>
+                            </div>
+                    </li>
+                    <li><a href="#footer" class="smoothScroll">Contact</a></li>
+                </ul>
+
+             </div>
+
+            </div>
+    </section>
+
+    <!-- Modal Parking -->
+    <div class="modal fade" id="modalParking" role="dialog" aria-hidden="true" tabindex="-1">
+        <div class="modal-dialog ">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h3 id="myModalLabel">Add Parking Lot</h3>
+                </div>
+
+                <!-- Modal Body -->
+
+
+                <div class="modal-body">
+                    <form action="" id="">
+                        <div class="form-group">
+                            <!-- Datos de la BD -->
+                            <label>Name</label>
+                             <input type="text" name="nameParking" id="nameParking" class="form-control" required="">
+                        </div>
+                        <div class="form-group">
+                            <label>Location</label>
+                             <input type="text" name="location" id="location" class="form-control" required="">
+                        </div>
+
+                    </form>
+                </div>
+
+                <!-- Modal Footer-->
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-info">Add</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Modal PROFILE -->
+
+    <!-- Modal USER -->
+    <div class="modal fade" id="modalUser" role="dialog" aria-hidden="true" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h3 id="myModalLabel">Add User</h3>
+                </div>
+
+                <!-- Modal Body -->
+
+
+                <div class="modal-body">
+                    <form action="" id="user">
+                        <div class="form-group">
+                            <div class="dropdown">
+                                <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" id="dropdownMenuButton">
+                                    Type ▼
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <li><a href="#">Operator</a></li>
+                                    <li><a href="#">Administrator</a></li>
+                                </ul>
+                            </div>
+                            </div>
+                            <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" name="nameUSer" id="nameUSer" class="form-control" required="">
+                            </div>
+                        <div class="form-group">
+                            <label>Last Name</label>
+                            <input type="lastName" name="lastNameUser" id="lastNameUser" class="form-control" required="">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" name="emailUser" id="emailUser" class="form-control" required="">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Phone</label>
+                            <input type="phone" name="phoneUser" id="phoneUser" class="form-control" required="">
+                        </div>
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input type="password" name="passwordUser" id="passwordUser" class="form-control" required="">
+                        </div>
+                        
+
+                    </form>
+                </div>
+
+                <!-- Modal Footer-->
+
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-info" onsubmit="" id="">Add</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Modal CALCULATE -->
+
+    <!-- HOME -->
+    <section id="home">
+        <div class="container">
+                <h2>Administrator Mode</h2>
+                <h4>Detailed listings</h4>
+                <div class="row">
+
+                <div class="col-xs-3">
+                    <div id="squareAdmin">
+                        <h3>Vehicle</h3>
+                        @*<img src=~/images/vehicle.png />*@
+                        <a class="btn" id="hereAdmin" href="#">Here</a>
+                    </div>
+                </div>
+
+                <div class="col-xs-3">
+                    <div id="squareAdmin">
+                        <h3>Client</h3>
+                        @*<img src=~/images/users.png />*@
+                        <a class="btn" id="hereAdmin" href="#client">Here</a>
+                    </div>
+                </div>
+
+                <div class="col-xs-3">
+                    <div id="squareAdmin">
+                        <h3>Parking</h3>
+                        @*<img src=~/images/location.png />*@
+                        <a class="btn" id="hereAdmin" href="#parking">Here</a>
+                    </div>
+                </div>
+
+                <div class="col-xs-3">
+                    <div id="squareAdmin">
+                        <h3>Parking Space</h3>
+                        @*<img src=~/images/spaces.png />*@
+                        <a class="btn" id="hereAdmin" href="#">Here</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <br />
+
+            <div class="row">
+
+                <div class="col-xs-3">
+                    <div id="squareAdmin">
+                        <h3>Role</h3>
+                        @*<img src=~/images/table.png />*@
+                        <a class="btn" id="hereAdmin" href="#">Here</a>
+                    </div>
+                </div>
+
+                <div class="col-xs-3">
+                    <div id="squareAdmin">
+                        <h3>User</h3>
+                        @*<img src=~/images/user.png />*@
+                        <a class="btn" id="hereAdmin" href="#">Here</a>
+                    </div>
+                </div>
+
+                <div class="col-xs-3">
+                    <div id="squareAdmin">
+                        <h3>Fare</h3>
+                        @*<img src=~/images/ticket.png />*@
+                        <a class="btn" id="hereAdmin" href="#">Here</a>
+                    </div>
+                </div>
+
+                <div class="col-xs-3">
+                    <div id="squareAdmin">
+                        <h3>My Profile</h3>
+                        @*<img src=~/images/profile.png />*@
+                        <a class="btn" id="hereAdmin" data-target="#modalProfile" data-toggle="modal">Here</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+   
+
+    <!-- PARKING-->
+    <section id="parking">
+        <div class="container">
+            <div class="row">
+                <div class="section-title">
+                    <h2>Parking Lots</h2>
+                </div>
+
+                <div class="col-md-12 col-sm-12">
+
+                    <div class="table-responsive">
+
+                        <table class="table table-bordered table-hover" id="parking-table">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        ID
+                                    </th>
+                                    <th>
+                                        Name
+                                    </th>
+                                    <th>
+                                        Location
+                                    </th>
+                                    <th>
+                                        Action
+                                    </th>
+
+
+                                </tr>
+
+                            </thead>
+
+                            <tbody id="parking-tbody">
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- CLIENT -->
+    <section id="client">
+        <div class="container">
+            <div class="row">
+                <div class="section-title">
+                    <h2>Clients</h2>
+                </div>
+
+                <div class="col-md-12 col-sm-12">
+
+                    <div class="table-responsive">
+
+                        <table class="table table-bordered table-hover" id="client-table">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        ID
+                                    </th>
+                                    <th>
+                                        Name
+                                    </th>
+                                    <th>
+                                        Email
+                                    </th>
+                                    <th>
+                                        Action
+                                    </th>
+
+
+                                </tr>
+
+                            </thead>
+
+                            <tbody id="client-tbody">
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal PROFILE -->
+    <div class="modal fade" id="modalProfile" role="dialog" aria-hidden="true" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h3 id="myModalLabel">MY PROFILE</h3>
+                </div>
+
+                <!-- Modal Body -->
+
+
+                <div class="modal-body">
+                    <form action="" id="">
+                        <div class="form-group">
+                            <!-- Datos de la BD -->
+                            <label>Full Name</label>
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                        </div>
+                        <div class="form-group">
+                            <label>Password</label>
+                        </div>
+
+                    </form>
+                </div>
+
+                <!-- Modal Footer-->
+
+                <div class="modal-footer">
+                    <button type="button" data-dismiss="modal">Sign Out</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Modal PROFILE -->
+
+    <!-- FOOTER -->
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-4 col-sm-12">
+                    <div class="footer-info newsletter-form">
+                        <div class="section-title">
+                            <img id="logoimg" src="~/images/Capture1.png"></img>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="footer-info">
+                        <div class="section-title">
+                            <h2>Contact Info</h2>
+                        </div>
+                        <address>
+                            <p>+(506) 1800 1100</p>
+                            <p><a>parking@rajsgmail.com</a></p>
+                        </address>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="footer-info">
+                        <div class="copyright-text">
+                            <p>Copyright &copy; 2022 Parking RAJS</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- SCRIPTS -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/Customer.js"></script>
+    <script src="bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
