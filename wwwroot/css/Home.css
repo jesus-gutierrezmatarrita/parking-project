@@ -489,6 +489,23 @@ footer {
     height: 130px;
 }
 
+.slot {
+    height: 150px;
+    width: 100px;
+    border-radius: 10px;
+    background-color: #29686B;
+    margin-right: 2%;
+    margin-bottom: 2%;
+}
+
+.indicator-container {
+    height: 50px;
+    width: 50px;
+    margin-right: 2%;
+    margin-bottom: 2%;
+    background-color: #0F2526;
+}
+
 
 /*---------------------------------------
      RESPONSIVE STYLES              
