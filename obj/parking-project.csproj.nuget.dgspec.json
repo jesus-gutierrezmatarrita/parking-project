@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jesus\\Source\\Repos\\jesus-gutierrezmatarrita\\parking-project\\parking-project.csproj": {}
+    "C:\\Users\\jesus\\Downloads\\parking-project\\parking-project.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jesus\\Source\\Repos\\jesus-gutierrezmatarrita\\parking-project\\parking-project.csproj": {
+    "C:\\Users\\jesus\\Downloads\\parking-project\\parking-project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jesus\\Source\\Repos\\jesus-gutierrezmatarrita\\parking-project\\parking-project.csproj",
+        "projectUniqueName": "C:\\Users\\jesus\\Downloads\\parking-project\\parking-project.csproj",
         "projectName": "parking-project",
-        "projectPath": "C:\\Users\\jesus\\Source\\Repos\\jesus-gutierrezmatarrita\\parking-project\\parking-project.csproj",
+        "projectPath": "C:\\Users\\jesus\\Downloads\\parking-project\\parking-project.csproj",
         "packagesPath": "C:\\Users\\jesus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jesus\\Source\\Repos\\jesus-gutierrezmatarrita\\parking-project\\obj\\",
+        "outputPath": "C:\\Users\\jesus\\Downloads\\parking-project\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jesus\\AppData\\Roaming\\NuGet\\NuGet.Config",
