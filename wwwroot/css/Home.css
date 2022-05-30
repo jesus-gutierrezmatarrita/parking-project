@@ -496,6 +496,11 @@ footer {
     background-color: #29686B;
     margin-right: 2%;
     margin-bottom: 2%;
+    cursor: pointer;
+}
+
+.slot:hover {
+    background-color: #66a5a8;
 }
 
 .indicator-container {
