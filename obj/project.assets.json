@@ -438,9 +438,6 @@
       },
       "Microsoft.Owin/4.2.2": {
         "type": "package",
-        "dependencies": {
-          "Owin": "1.0.0"
-        },
         "compile": {
           "lib/net45/Microsoft.Owin.dll": {}
         },
@@ -450,10 +447,6 @@
       },
       "Microsoft.Owin.Host.SystemWeb/4.2.2": {
         "type": "package",
-        "dependencies": {
-          "Microsoft.Owin": "4.2.2",
-          "Owin": "1.0.0"
-        },
         "compile": {
           "lib/net45/Microsoft.Owin.Host.SystemWeb.dll": {}
         },
@@ -7338,19 +7331,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jesus\\.nuget\\packages\\": {}
+    "C:\\Users\\Ricardo\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jesus\\Source\\Repos\\jesus-gutierrezmatarrita\\parking-project\\parking-project.csproj",
+      "projectUniqueName": "C:\\Users\\Ricardo\\Documents\\GitHub\\parking-project\\parking-project.csproj",
       "projectName": "parking-project",
-      "projectPath": "C:\\Users\\jesus\\Source\\Repos\\jesus-gutierrezmatarrita\\parking-project\\parking-project.csproj",
-      "packagesPath": "C:\\Users\\jesus\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jesus\\Source\\Repos\\jesus-gutierrezmatarrita\\parking-project\\obj\\",
+      "projectPath": "C:\\Users\\Ricardo\\Documents\\GitHub\\parking-project\\parking-project.csproj",
+      "packagesPath": "C:\\Users\\Ricardo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Ricardo\\Documents\\GitHub\\parking-project\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\jesus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Ricardo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7429,7 +7422,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   },

@@ -98,6 +98,10 @@
                             <label>Location</label>
                              <input type="text" name="location" id="location" class="form-control" required="">
                         </div>
+                        <div class="form-group">
+                            <label>Capacity</label>
+                             <input type="number" name="capacity" id="capacity" class="form-control" required="">
+                        </div>
 
                     </form>
                 </div>
@@ -105,8 +109,10 @@
                 <!-- Modal Footer-->
 
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-info">Add</button>
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                    <label id="result-p"></label>
+                    <button type="submit" class="btn btn-info" onclick= "AddParking()" id="btn-add-parking">Add</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+
                 </div>
 
             </div>
@@ -290,6 +296,9 @@
                                         Location
                                     </th>
                                     <th>
+                                        Capacity
+                                    </th>
+                                    <th>
                                         Action
                                     </th>
 
@@ -442,9 +451,11 @@
     <script src="js/smoothscroll.js"></script>
     <script src="js/custom.js"></script>
     <script src="js/Customer.js"></script>
+    <script src="js/Parking.js"></script>
     <script src="bootstrap.bundle.min.js"></script>
      <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
      <script src = "https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+
 
 </body>
 </html>

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jesus\\Source\\Repos\\jesus-gutierrezmatarrita\\parking-project\\parking-project.csproj": {}
+    "C:\\Users\\Ricardo\\Documents\\GitHub\\parking-project\\parking-project.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jesus\\Source\\Repos\\jesus-gutierrezmatarrita\\parking-project\\parking-project.csproj": {
+    "C:\\Users\\Ricardo\\Documents\\GitHub\\parking-project\\parking-project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jesus\\Source\\Repos\\jesus-gutierrezmatarrita\\parking-project\\parking-project.csproj",
+        "projectUniqueName": "C:\\Users\\Ricardo\\Documents\\GitHub\\parking-project\\parking-project.csproj",
         "projectName": "parking-project",
-        "projectPath": "C:\\Users\\jesus\\Source\\Repos\\jesus-gutierrezmatarrita\\parking-project\\parking-project.csproj",
-        "packagesPath": "C:\\Users\\jesus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jesus\\Source\\Repos\\jesus-gutierrezmatarrita\\parking-project\\obj\\",
+        "projectPath": "C:\\Users\\Ricardo\\Documents\\GitHub\\parking-project\\parking-project.csproj",
+        "packagesPath": "C:\\Users\\Ricardo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ricardo\\Documents\\GitHub\\parking-project\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\jesus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Ricardo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -93,7 +93,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
