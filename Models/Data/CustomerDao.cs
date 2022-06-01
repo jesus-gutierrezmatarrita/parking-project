@@ -82,7 +82,7 @@ namespace parking_project.Models.Data
                 return customers;
 
             }
-            public int Delete(int Id)
+            /*public int Delete(int Id)
             {
                 int resultToReturn;
                 Exception? exception = new Exception();
@@ -104,7 +104,7 @@ namespace parking_project.Models.Data
                     throw exception;
                 }
                 return resultToReturn;
-            }
+            }*/
 
         }
 

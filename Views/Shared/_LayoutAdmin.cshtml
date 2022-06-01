@@ -18,6 +18,7 @@
 
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="css/Home.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
 
 </head>
 
@@ -92,7 +93,7 @@
                         <div class="form-group">
                             <!-- Datos de la BD -->
                             <label>Name</label>
-                             <input type="text" name="nameParking" id="nameParking" class="form-control" required="">
+                             <input type="text" name="nameParking" id="nameParking" class="form-control" required="" onclick= "ClearResultLabel()">
                         </div>
                         <div class="form-group">
                             <label>Location</label>
@@ -111,7 +112,54 @@
                 <div class="modal-footer">
                     <label id="result-p"></label>
                     <button type="submit" class="btn btn-info" onclick= "AddParking()" id="btn-add-parking">Add</button>
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-danger" onclick= "ClearResultLabel()" data-dismiss="modal">Close</button>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalEditParking" role="dialog" aria-hidden="true" tabindex="-1">
+        <div class="modal-dialog ">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h3 id="myModalLabel">Edit Parking Lot</h3>
+                </div>
+
+                <!-- Modal Body -->
+
+
+                <div class="modal-body">
+                    <form action="" id="">
+                        <div class="form-group">
+                            <input type="text" name="id" id="id-p-u" hidden>
+                        </div>
+                        <div class="form-group">
+                            <!-- Datos de la BD -->
+                            <label>Name</label>
+                             <input type="text" name="nameParking" id="nameParking-u" class="form-control" required="">
+                        </div>
+                        <div class="form-group">
+                            <label>Location</label>
+                             <input type="text" name="location" id="location-u" class="form-control" required="">
+                        </div>
+                        <div class="form-group">
+                            <label>Capacity</label>
+                             <input type="number" name="capacity" id="capacity-u" class="form-control" required="">
+                        </div>
+
+                    </form>
+                </div>
+
+                <!-- Modal Footer-->
+
+                <div class="modal-footer">
+                    <label id="result-p-u"></label>
+                    <button type="submit" class="btn btn-info" onclick= "return UpdateParking();" id="btn-update-parking">Save</button>
+                    <button type="button" class="btn btn-danger" onclick= "ClearResultLabel()" data-dismiss="modal">Close</button>
 
                 </div>
 
@@ -453,8 +501,8 @@
     <script src="js/Customer.js"></script>
     <script src="js/Parking.js"></script>
     <script src="bootstrap.bundle.min.js"></script>
-     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-     <script src = "https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src = "https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
 
 
 </body>
