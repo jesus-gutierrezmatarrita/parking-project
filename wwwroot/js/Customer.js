@@ -56,7 +56,51 @@
 
 
 }
+function GetCustomerByEmail(emailCustomer) {
 
+    var email = "";
+    $.ajax({
+        url: "/Customer/GetByEmail",
+        type: "GET",
+        data: { email: emailCustomer },
+        success: function (result) {
+
+            $('#idClient').val(result.id);// se ocupa para actualizar
+            $('#nameClient').val(result.name);
+            $('#lastNameClient').val(result.lastname);
+            $('#emailClient').val(result.email);
+            $('#phoneClient').val(result.phone);
+        },
+        error: function (errorMessage) {
+            if (errorMessage === "no connection") {
+                
+            }
+            $('#passwordClient').val('');
+        }
+    });
+}
+function Delete(id) {
+    var alert = confirm("Are you sure you want to delete this record?");
+    if (alert) {
+        $.ajax({
+            data: JSON.stringify(id), //converte la variable estudiante en tipo json
+            url: "/Customer/Delete/" + id,
+            type: "POST",
+            contentType: "application/json;charset=utf-8",
+            dataType: "json",
+            success: function (result) {
+                LoadCustomers()
+                alert("The student has been successfully eliminated");
+            },
+            error: function (errorMessage) {
+                if (errorMessage === "no connection") {
+                    $('#resultU').text("Error en la conexión.");
+                }
+            }
+        });
+
+    }
+}
 function LoadCustomers() {
 
     $.ajax({
@@ -76,6 +120,7 @@ function LoadCustomers() {
                 html += '<td>' + item.lastname + '</td>';
                 html += '<td>' + item.email + '</td>';
                 html += '<td>' + item.phone + '</td>';
+                html += '<td><a href="#modalUpdate" onclick="GetCustomerByEmail(\'' + item.email + '\')">Edit</a> | <a href="#client" onclick="Delete(' + item.id + ')">Delete</a></td>';
                 html += '</tr>';
             });
 

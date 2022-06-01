@@ -9,7 +9,6 @@ namespace parking_project.Models
         private string name;
         private string lastname;
         private string password;
-        private Vehicle vehicle;
         private string email;
         private int phone;
 
@@ -32,7 +31,6 @@ namespace parking_project.Models
         public string Name { get => name; set => name = value; }
         public string Lastname { get => lastname; set => lastname = value; }
         public string Password { get => password; set => password = value; }
-        public Vehicle Vehicle { get => vehicle; set => vehicle = value; }
         public string Email { get => email; set => email = value; }
         public int Phone { get => phone; set => phone = value; }
     }

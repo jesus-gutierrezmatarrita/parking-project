@@ -82,7 +82,48 @@ namespace parking_project.Models.Data
                 return customers;
 
             }
-            public int Delete(int Id)
+        }
+        public Customer Get(string email)
+        {
+            Customer customer = new Customer(); 
+            Exception? exception = new Exception();
+            try
+            {
+
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+
+
+                    connection.Open();
+                    SqlCommand command = new SqlCommand("GetCustomer", connection);
+                    command.CommandType = System.Data.CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@Email", email);
+
+                    SqlDataReader sqlDataReader = command.ExecuteReader();
+
+
+                    if (sqlDataReader.Read())
+                    {
+                        customer.Id = Convert.ToInt32(sqlDataReader.GetInt32(0));
+                        customer.Name = sqlDataReader.GetString(1);
+                        customer.Lastname = sqlDataReader.GetString(2);
+                        customer.Email = sqlDataReader.GetString(4);
+                        customer.Phone = Convert.ToInt32(sqlDataReader.GetInt32(5));
+                    }
+
+                    connection.Close();
+
+
+                    return customer;
+                }
+            }
+            catch (Exception ex)
+            {
+                exception = ex;
+                throw exception;
+            }
+        }
+        public int Delete(int Id)
             {
                 int resultToReturn;
                 Exception? exception = new Exception();
@@ -91,7 +132,7 @@ namespace parking_project.Models.Data
                     using (SqlConnection connection = new SqlConnection(connectionString))
                     {
                         connection.Open();
-                        SqlCommand command = new SqlCommand("DeleteStudent", connection);
+                        SqlCommand command = new SqlCommand("DeleteCustomer", connection);
                         command.CommandType = System.Data.CommandType.StoredProcedure;
                         command.Parameters.AddWithValue("@Id", Id);
                         resultToReturn = command.ExecuteNonQuery();
@@ -105,10 +146,46 @@ namespace parking_project.Models.Data
                 }
                 return resultToReturn;
             }
+        public int Update(Customer customer)
+        {
+            int resultToReturn = 0;//it will save 1 or 0 depending on the result of insertion
+            Exception? exception = new Exception();
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+
+
+                    connection.Open();
+                    SqlCommand command = new SqlCommand("UpdateCustomer", connection);
+                    command.CommandType = System.Data.CommandType.StoredProcedure;
+
+                    command.Parameters.AddWithValue("@Id", customer.Id);
+                    command.Parameters.AddWithValue("@Name", customer.Name);
+                    command.Parameters.AddWithValue("@Lastname", customer.Lastname);
+                    command.Parameters.AddWithValue("@Password", customer.Password);
+                    command.Parameters.AddWithValue("@Email", customer.Email);
+                    command.Parameters.AddWithValue("@Phone", customer.Phone);
+
+                    resultToReturn = command.ExecuteNonQuery();
+                    connection.Close();
+
+                }
+            }
+            catch (Exception ex)
+            {
+                exception = ex;
+                throw exception;
+            }
+
+
+            return resultToReturn;
 
         }
+
+    }
 
 
 
     }
-}
+
