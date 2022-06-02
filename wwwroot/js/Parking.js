@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
 
     LoadParkings();
-    DeleteParkingSlot(1);
+    GetParkingSlot();
     return false;
 
 });
