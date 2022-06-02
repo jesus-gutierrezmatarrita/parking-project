@@ -1,9 +1,9 @@
-<<<<<<< HEAD
-﻿$(document).ready(function () {
+
+$(document).ready(function () {
     $('#username').focus();
 
     $('#signinBtn').on('click', function () {
-        if ($('#username').val() != "" & $('#passwrd').val() != "" {
+        if ($('#username').val() != "" & $('#passwrd').val() != "") {
             Validate($('#username').val(), $('#passwrd').val());
         } else {
             Swal.fire(
@@ -49,10 +49,44 @@
             }
         });
     }
+
+    GetParkingSlot();
 });
-=======
+
+function GetParkingSlot() {
+    $.ajax({
+        url: "/Parking/GetParkingSlots",
+        type: "GET",
+        contentType: "application/json;charset=utf-8",
+        dataType: "json",
+        success: function (result) {
+            $.each(result, function (key, item) {
+                console.log(item.id);
+                console.log(item.type);
+                console.log(item.state);
+            });
+        },
+        error: function (errorMessage) {
+             alert("Error");
+            //alert(errorMessage.responseText);
+        }
+    });
+}
+
+function AddParkingSlot() {
+    $.ajax({
+        url: '/ParkingSlot/AddParkingSlot',
+        type: 'POST',
+        success: function (result) {
+            console.log("success");
+        },
+        error: function (result) {
+            console.log("error");
+        }
+    });
+}
+
 ﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 // for details on configuring this project to bundle and minify static web assets.
 
 // Write your JavaScript code.
->>>>>>> bfd3be86c6e2bcaa83fa27d7704316fc62e35e8a

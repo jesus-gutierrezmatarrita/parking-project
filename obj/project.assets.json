@@ -7343,11 +7343,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jesus\\Downloads\\parking-project\\parking-project.csproj",
+      "projectUniqueName": "C:\\Users\\jesus\\Downloads\\Universidad\\I-2022\\Lenguajes para Aplicaciones Comerciales\\Proyecto1\\parking-project\\parking-project.csproj",
       "projectName": "parking-project",
-      "projectPath": "C:\\Users\\jesus\\Downloads\\parking-project\\parking-project.csproj",
+      "projectPath": "C:\\Users\\jesus\\Downloads\\Universidad\\I-2022\\Lenguajes para Aplicaciones Comerciales\\Proyecto1\\parking-project\\parking-project.csproj",
       "packagesPath": "C:\\Users\\jesus\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jesus\\Downloads\\parking-project\\obj\\",
+      "outputPath": "C:\\Users\\jesus\\Downloads\\Universidad\\I-2022\\Lenguajes para Aplicaciones Comerciales\\Proyecto1\\parking-project\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\jesus\\AppData\\Roaming\\NuGet\\NuGet.Config",

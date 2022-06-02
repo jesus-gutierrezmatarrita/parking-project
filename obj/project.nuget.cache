@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VC41VWHj1UWz7EW8TPvolfN4RyVLdq0cxiN/JH/awPu7E03lovRRNpaoJRNzeuHkCkGg5FpKk2y1yNZS/Q6+9A==",
+  "dgSpecHash": "6KsDKt4uEAxc/WXs6+vhmBkk0+323nORhBtB2zf4Fm3CWOb0mKKhhuf2YocXXXjcGipNqtdkxXhRLGi0FmjJRw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jesus\\Downloads\\parking-project\\parking-project.csproj",
+  "projectFilePath": "C:\\Users\\jesus\\Downloads\\Universidad\\I-2022\\Lenguajes para Aplicaciones Comerciales\\Proyecto1\\parking-project\\parking-project.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jesus\\.nuget\\packages\\entityframework\\6.2.0\\entityframework.6.2.0.nupkg.sha512",
     "C:\\Users\\jesus\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
