@@ -45,6 +45,39 @@ namespace parking_project.Models.Data
 
         }
 
+        public int InsertSlot(ParkingSlot parkingSlot)
+        {
+            int resultToReturn = 0;//it will save 1 or 0 depending on the result of insertion
+            Exception? exception = new Exception();
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    SqlCommand command = new SqlCommand("InsertParkingSlot", connection);
+                    command.CommandType = System.Data.CommandType.StoredProcedure;
+
+                    command.Parameters.AddWithValue("@id", parkingSlot.SlotId);
+                    command.Parameters.AddWithValue("@state", parkingSlot.State);
+                    command.Parameters.AddWithValue("@type", parkingSlot.Type);
+                    command.Parameters.AddWithValue("@parkingId", parkingSlot.ParkingId);
+                    command.Parameters.AddWithValue("@price", parkingSlot.Price);
+
+                    resultToReturn = command.ExecuteNonQuery();
+                    connection.Close();
+
+                }
+            }
+            catch (Exception ex)
+            {
+                exception = ex;
+                throw exception;
+            }
+
+            return resultToReturn;
+
+        }
+
         public List<Parking> Get()
         {
 

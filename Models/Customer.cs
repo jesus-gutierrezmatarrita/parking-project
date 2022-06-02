@@ -5,14 +5,7 @@ namespace parking_project.Models
 {
     public partial class Customer
     {
-<<<<<<< HEAD
-        public int Id { get; set; }
-        public string Name { get; set; } = null!;
-        public string? Lastname { get; set; }
-        public string Password { get; set; } = null!;
-        public string Email { get; set; } = null!;
-        public int Phone { get; set; }
-=======
+
         private int id;
         private string name;
         private string lastname;
@@ -43,6 +36,6 @@ namespace parking_project.Models
         public Vehicle Vehicle { get => vehicle; set => vehicle = value; }
         public string Email { get => email; set => email = value; }
         public int Phone { get => phone; set => phone = value; }
->>>>>>> 71adbe92b488b2c6cb57f40d40c059f72abe6cd0
+
     }
 }

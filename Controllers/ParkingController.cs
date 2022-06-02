@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using parking_project.Models;
 using parking_project.Models.Data;
-using parking_project.Models.Domain;
 
 namespace parking_project.Controllers
 {
@@ -25,6 +25,12 @@ namespace parking_project.Controllers
         public IActionResult Insert([FromBody] Parking parking)
         {
             int resultToReturn = parkingDao.Insert(parking);
+            return Ok(resultToReturn);
+        }
+
+        public IActionResult InsertSlot([FromBody] ParkingSlot parkingSlot)
+        {
+            int resultToReturn = parkingDao.InsertSlot(parkingSlot);
             return Ok(resultToReturn);
         }
 
