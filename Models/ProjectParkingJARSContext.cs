@@ -46,6 +46,7 @@ namespace parking_project.Models
                 entity.Property(e => e.Password).HasMaxLength(50);
             });
 
+<<<<<<< HEAD
             modelBuilder.Entity<Parking>(entity =>
             {
                 entity.ToTable("Parking");
@@ -111,6 +112,9 @@ namespace parking_project.Models
                     .HasMaxLength(20)
                     .HasColumnName("color")
                     .IsFixedLength();
+=======
+                //entity.Property(e => e.Username).HasMaxLength(50);
+>>>>>>> 71adbe92b488b2c6cb57f40d40c059f72abe6cd0
             });
 
             modelBuilder.Entity<staff>(entity =>
