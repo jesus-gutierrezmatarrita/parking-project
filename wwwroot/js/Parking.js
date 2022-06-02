@@ -1,6 +1,7 @@
 ﻿$(document).ready(function () {
 
     LoadParkings();
+    DeleteParkingSlot(1);
     return false;
 
 });
@@ -167,6 +168,110 @@ function UpdateParking() {
     }
 
 
+}
+
+function GetParkingSlot() {
+    $.ajax({
+        url: "/Parking/GetParkingSlots",
+        type: "GET",
+        contentType: "application/json;charset=utf-8",
+        dataType: "json",
+        success: function (result) {
+            $.each(result, function (key, item) {
+                console.log("Slot ID: " + item.slotId);
+                console.log("State: " + item.state);
+                console.log("Type: " + item.type);
+                console.log("Price: " + item.price);
+            });
+        },
+        error: function (errorMessage) {
+            alert("Error");
+            //alert(errorMessage.responseText);
+        }
+    });
+}
+
+function AddParkingSlot() {
+    let parkingSlot = {
+        slotId: prompt("Type an ID"),
+        state: prompt("Type a state"),
+        type: prompt("Type a type"),
+        parkingId: prompt("Type a parkingId"),
+        price: prompt("Type a price")
+    };
+
+    if (parkingSlot != null) {
+
+        $.ajax({
+            url: "/Parking/InsertSlot",
+            data: JSON.stringify(parkingSlot), //converte la variable espacio de parqueo en tipo json
+            type: "POST",
+            contentType: "application/json;charset=utf-8",
+            dataType: "json",
+            success: function (result) {
+                alert("Success!")
+            },
+            error: function (errorMessage) {
+                alert("Failure!")
+            }
+        });
+
+    }
+
+}
+
+function UpdateParkingSlot() {
+    let parkingSlot = {
+        slotId: prompt("Type an ID"),
+        state: prompt("Type a state"),
+        type: prompt("Type a type"),
+        parkingId: prompt("Type a parkingId"),
+        price: prompt("Type a price")
+    };
+
+    if (parkingSlot != null) {
+
+        $.ajax({
+            url: "/Parking/UpdateSlot",
+            data: JSON.stringify(parkingSlot), //converte la variable espacio de parqueo en tipo json
+            type: "POST",
+            contentType: "application/json;charset=utf-8",
+            dataType: "json",
+            success: function (result) {
+                alert("Success!")
+            },
+            error: function (errorMessage) {
+                alert("Failure!")
+            }
+        });
+
+    }
+
+}
+
+function DeleteParkingSlot(id) {
+    let alert = confirm("Are you sure you want to delete the parking slot with number: " + id + "?");
+    if (alert) {
+        $.ajax({
+
+            data: JSON.stringify(id), //convierte la variable en tipo json
+            url: "/Parking/DeleteSlot/" + id,
+            type: "DELETE",
+            contentType: "application/json;charset=utf-8",
+            dataType: "json",
+            success: function (result) {
+
+                GetParkingSlot();
+            },
+            error: function (errorMessage) {
+                /*
+                if (errorMessage === "no connection") {
+                    $('#result-p').text("Error en la conexión.");
+                }*/
+            }
+        });
+
+    }
 }
 
 function ClearResultLabel() {

@@ -39,14 +39,29 @@ namespace parking_project.Controllers
             return Ok(parkingDao.Get());
         }
 
+        public IActionResult GetParkingSlots()
+        {
+            return Ok(parkingDao.GetParkingSlots());
+        }
+
         public IActionResult Delete(int id)
         {
             return Ok(parkingDao.Delete(id));
         }
 
+        public IActionResult DeleteSlot(int id)
+        {
+            return Ok(parkingDao.DeleteSlot(id));
+        }
+
         public IActionResult Update([FromBody] Parking parking)
         {
             return Ok(parkingDao.Update(parking));
+        }
+
+        public IActionResult UpdateSlot([FromBody] ParkingSlot parkingSlot)
+        {
+            return Ok(parkingDao.UpdateSlot(parkingSlot));
         }
 
         public IActionResult GetById(int id)
