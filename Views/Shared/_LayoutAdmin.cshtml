@@ -398,6 +398,9 @@
                                     <th>
                                         Phone
                                     </th>
+                                    <th>
+                                        Action
+                                    </th>
                  
 
                                 </tr>
@@ -413,6 +416,61 @@
             </div>
         </div>
     </section>
+         <!-- Modal UPDATE -->
+     <div class="modal fade" id="modalUpdate" role="dialog" aria-hidden="true" tabindex="-1">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+
+                                <!-- Modal Header -->
+                                <div class="modal-header" >
+                                    <h3 id="myModalLabel">Update</h3>
+                                </div> 
+
+                                <!-- Modal Body -->
+
+                                
+                                   <div class="modal-body">
+                                        <form action="" id="formUpdate">
+
+                                             <div class="form-group">
+
+                                                  <input type="text" name="idClientU" id="idClientU" hidden>
+                                                <label>Full Name</label>
+                                                <input type="text" name="nameClientU" id="nameClientU" class="form-control" required="">
+                                             </div>                                 
+
+                                             <div class="form-group">
+                                                <label>Last Name</label>
+                                                <input type="lastName" name="lastNameClientU" id="lastNameClientU" class="form-control" required="">
+                                             </div>
+
+                                            <div class="form-group">
+                                              <label>Email</label>
+                                                <input type="email" name="emailClientU" id="emailClientU" class="form-control" required="">
+                                             </div>
+
+                                             <div class="form-group">
+                                                <label>Phone</label>
+                                                <input type="phone" name="phoneClientU" id="phoneClientU" class="form-control" required="">
+                                             </div>
+                                             <div class="form-group">
+                                                <label>Password</label>
+                                                <input type="password" name="passwordClientU" id="passwordClientU" class="form-control" required="">
+                                             </div>
+                                             
+                                        </form>
+                                   </div>
+
+                                <!-- Modal Footer-->
+
+                                <div class="modal-footer">
+                                    <button type="submit" class="btn btn-success" onclick= "return UpdateCustomer();">Update</button>
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                    <!-- Modal SIGN UPDATE -->
 
     <!-- Modal PROFILE -->
     <div class="modal fade" id="modalProfile" role="dialog" aria-hidden="true" tabindex="-1">

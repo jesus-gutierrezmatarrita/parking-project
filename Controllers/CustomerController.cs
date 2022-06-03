@@ -16,6 +16,7 @@ namespace parking_project.Controllers
         {
             _logger = logger;
             _configuration = configuration;
+            customerDAO = new CustomerDao(_configuration);
             //TODO:instantiate studentDAO only once here
 
         }
@@ -28,16 +29,59 @@ namespace parking_project.Controllers
 
         public IActionResult Insert([FromBody] Customer customer)
         {
+            if (customerDAO.Get(customer.Email).Email == null)
+            {
 
                 int resultToReturn = customerDAO.Insert(customer);
                 return Ok(resultToReturn);
-          
             }
+            else
+            {
+                return Error();
+            }
+        }
         public IActionResult Get()
         {
-            customerDAO = new CustomerDao(_configuration);
             return Ok(customerDAO.Get());
 
+        }
+        public IActionResult GetByEmail(string email)
+        {
+            Customer customer = customerDAO.Get(email);
+
+            return Ok(customer);
+
+        }
+        public IActionResult Update([FromBody] Customer customer)
+        {
+
+            if (customer.Id == customerDAO.Get(customer.Email).Id)
+            {
+                return Ok(customerDAO.Update(customer));
+            }
+            else
+            {
+                if (customerDAO.Get(customer.Email).Email == null)
+                {
+
+                    return Ok(customerDAO.Update(customer));
+                }
+                else
+                {
+                    return Error();
+                }
+            }
+
+        }
+
+        private IActionResult Error()
+        {
+            throw new NotImplementedException();
+        }
+
+        public IActionResult Delete([FromBody] int Id)
+        {
+            return Ok(customerDAO.Delete(Id));
         }
     }
 }
