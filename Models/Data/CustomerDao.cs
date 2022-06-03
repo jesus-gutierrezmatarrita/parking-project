@@ -181,13 +181,9 @@ namespace parking_project.Models.Data
 
 
             return resultToReturn;
-            }
 
         }
 
     }
-
-
-
-    }
+}
 
