@@ -5,6 +5,7 @@ namespace parking_project.Models
 {
     public partial class Customer
     {
+
         private int id;
         private string name;
         private string lastname;
@@ -33,5 +34,6 @@ namespace parking_project.Models
         public string Password { get => password; set => password = value; }
         public string Email { get => email; set => email = value; }
         public int Phone { get => phone; set => phone = value; }
+
     }
 }

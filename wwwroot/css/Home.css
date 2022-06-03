@@ -12,20 +12,26 @@ body {
      TYPOGRAPHY              
   -----------------------------------------*/
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+small {
     font-family: 'Muli', sans-serif;
     font-weight: bold;
     line-height: inherit;
 }
 
 h1 {
-    color: #252525;
+    color: #ededed;
     font-size: 3em;
     line-height: normal;
 }
 
 h2 {
-    color: #353535;
+    color: #d3d3d3;
     font-size: 2em;
     padding-bottom: 10px;
 }
@@ -35,13 +41,18 @@ h3 {
     margin-bottom: 0;
 }
 
-    h3,
-    h3 a {
-        color: #454545;
-    }
+small, i {
+    font-size: 0.8em;
+    color: #bcbcbc;
+}
+
+h3,
+h3 a {
+    color: #bcbcbc;
+}
 
 p {
-    color: #757575;
+    color: #b8b8b8;
     font-size: 14px;
     font-weight: normal;
     line-height: 24px;
@@ -61,23 +72,26 @@ html {
 }
 
 a {
-    color: #41807c;
+    color: #B0400E;
     -webkit-transition: 0.5s;
     transition: 0.5s;
     text-decoration: none !important;
 }
 
 a,
-input, button,
+input,
+button,
 .form-control {
     -webkit-transition: 0.5s;
     transition: 0.5s;
 }
 
-    a:hover, a:active, a:focus {
-        color: #29ca8e;
-        outline: none;
-    }
+a:hover,
+a:active,
+a:focus {
+    color: #29ca8e;
+    outline: none;
+}
 
 ::-webkit-scrollbar {
     width: 8px;
@@ -93,16 +107,16 @@ input, button,
     padding-bottom: 40px;
 }
 
-    .section-title h2 {
-        margin: 0;
-    }
+.section-title h2 {
+    margin: 0;
+}
 
-    .section-title small {
-        display: block;
-    }
+.section-title small {
+    display: block;
+}
 
 .overlay {
-    background: rgba(20,20,20,0.5);
+    background: rgba(20, 20, 20, 0.5);
     position: absolute;
     top: 0;
     right: 0;
@@ -112,12 +126,48 @@ input, button,
     height: 100%;
 }
 
+.transparent-bg {
+    background-color: rgba(150, 150, 150, 0.6);
+    border-radius: 10px;
+    padding: 10em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-container {
+    padding: 10em;
+}
+
+.slot {
+    height: 150px;
+    width: 100px;
+    border-radius: 10px;
+    background-color: #29686B;
+    margin-right: 2%;
+    margin-bottom: 2%;
+    cursor: pointer;
+}
+
+.slot:hover {
+    background-color: #66a5a8;
+}
+
+.indicator-container {
+    height: 150px;
+    width: 100px;
+    margin-right: 2%;
+    margin-bottom: 2%;
+    background-color: #0F2526;
+    border-radius: 10px;
+}
+
 
 /*---------------------------------------
      BUTTONS               
   -----------------------------------------*/
 
-#form-submit{
+#form-submit {
     background-color: transparent;
     border-color: black;
     width: 100px;
@@ -160,72 +210,72 @@ input, button,
     padding: 12px 0;
     margin-bottom: 0;
     padding: 0;
-   
+
 }
 
-    .custom-navbar .navbar-brand {
-        color: #454545;
-        font-size: 18px;
-        font-weight: bold;
-        line-height: 40px;
-    }
+.custom-navbar .navbar-brand {
+    color: #454545;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 40px;
+}
 
-    .custom-navbar .navbar-nav.navbar-nav-first {
-        margin-left: 39em;
-    }
+.custom-navbar .navbar-nav.navbar-nav-first {
+    margin-left: 39em;
+}
 
-    .custom-navbar .navbar-nav.navbar-right li a {
-        padding-right: 12px;
-        padding-left: 12px;
-    }
+.custom-navbar .navbar-nav.navbar-right li a {
+    padding-right: 12px;
+    padding-left: 12px;
+}
 
-        .custom-navbar .navbar-nav.navbar-right li a .fa {
-            background: #41807c;
-            border-radius: 100%;
-            color: #ffffff;
-            width: 30px;
-            height: 30px;
-            line-height: 30px;
-            text-align: center;
-            display: inline-block;
-            margin-right: 5px;
-        }
+.custom-navbar .navbar-nav.navbar-right li a .fa {
+    background: #41807c;
+    border-radius: 100%;
+    color: #ffffff;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    display: inline-block;
+    margin-right: 5px;
+}
 
-    .custom-navbar .nav li a {
-        line-height: 40px;
-        color: #575757;
-        padding-right: 22px;
-        padding-left: 22px;
-    }
+.custom-navbar .nav li a {
+    line-height: 40px;
+    color: #575757;
+    padding-right: 22px;
+    padding-left: 22px;
+}
 
-    .custom-navbar .navbar-nav > li > a:hover,
-    .custom-navbar .navbar-nav > li > a:focus {
-        background-color: transparent;
-    }
+.custom-navbar .navbar-nav>li>a:hover,
+.custom-navbar .navbar-nav>li>a:focus {
+    background-color: transparent;
+}
 
-    .custom-navbar .nav li a:hover {
-        background-color: #41807c;
-        color: #ffffff;
-    }
+.custom-navbar .nav li a:hover {
+    background-color: #41807c;
+    color: #ffffff;
+}
 
-    .custom-navbar .nav li.active > a {
-        background-color: #41807c;
-        color: #ffffff;
-    }
+.custom-navbar .nav li.active>a {
+    background-color: #41807c;
+    color: #ffffff;
+}
 
-    .custom-navbar .navbar-toggle {
-        border: none;
-        padding-top: 10px;
-    }
+.custom-navbar .navbar-toggle {
+    border: none;
+    padding-top: 10px;
+}
 
-    .custom-navbar .navbar-toggle {
-        background-color: transparent;
-    }
+.custom-navbar .navbar-toggle {
+    background-color: transparent;
+}
 
-        .custom-navbar .navbar-toggle .icon-bar {
-            background: #252525;
-            border-color: transparent;
-        }
+.custom-navbar .navbar-toggle .icon-bar {
+    background: #252525;
+    border-color: transparent;
+}
 
 .a .dropdown-item {
     background: #41807c;
@@ -244,17 +294,17 @@ input, button,
   -----------------------------------------*/
 
 
-    #home h1 {
-        color: #ffffff;
-    }
+#home h1 {
+    color: #ffffff;
+}
 
-    #home h3 {
-        color: #f9f9f9;
-        font-size: 16px;
-        font-weight: 300;
-        margin: 0;
-        padding: 5px 0 40px 0;
-    }
+#home h3 {
+    color: #f9f9f9;
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0;
+    padding: 5px 0 40px 0;
+}
 
 @media (min-width: 768px) {
     .home-slider .col-md-6 {
@@ -267,7 +317,7 @@ input, button,
     justify-content: center;
     flex-direction: column;
     text-align: left;
-    background-color: rgba(20,20,20,0.2);
+    background-color: rgba(20, 20, 20, 0.2);
     height: 100%;
     color: #fff;
     cursor: e-resize;
@@ -284,9 +334,9 @@ input, button,
     color: #FFF;
 }
 
-    .caption h3 a:hover {
-        color: #FF3;
-    }
+.caption h3 a:hover {
+    color: #FF3;
+}
 
 .home-slider .item-first {
     background-image: url(../images/slider1.jpg);
@@ -305,7 +355,7 @@ input, button,
      MODAL              
   -----------------------------------------*/
 
-.modal-content{
+.modal-content {
     background-color: black;
 }
 
@@ -320,7 +370,7 @@ input, button,
 }
 
 #myModalLabel {
-    color:aquamarine;
+    color: aquamarine;
 }
 
 
@@ -329,8 +379,7 @@ input, button,
     margin-top: 140px;
 }
 
-#calcu .form-group 
-{
+#calcu .form-group {
     display: flex;
     align-items: center;
 }
@@ -347,7 +396,7 @@ input, button,
     padding: 5px;
     background: linear-gradient(black, #41807c);
     height: 600px;
-    margin-top:20px;
+    margin-top: 20px;
 }
 
 
@@ -359,16 +408,16 @@ input, button,
     margin: 20px;
 }
 
-    #square h3 {
-        margin-left: 10px;
-    }
+#square h3 {
+    margin-left: 10px;
+}
 
 /*---------------------------------------
       PARKING             
   -----------------------------------------*/
 
 #parking {
-    width:861px;
+    width: 861px;
     height: 700px;
     padding: 5%;
 }
@@ -411,39 +460,39 @@ footer {
     margin-top: 10px;
 }
 
-    footer .section-title {
-        padding: 10px;
-    }
+footer .section-title {
+    padding: 10px;
+}
 
-    footer h2 {
-        font-size: 20px;
-    }
+footer h2 {
+    font-size: 20px;
+}
 
-    footer a,
-    footer p {
-        color: #909090;
-    }
+footer a,
+footer p {
+    color: #909090;
+}
 
-    footer strong {
-        color: #d9d9d9;
-    }
+footer strong {
+    color: #d9d9d9;
+}
 
-    footer address p {
-        margin-bottom: 0;
-    }
+footer address p {
+    margin-bottom: 0;
+}
 
-    footer .social-icon {
-        margin-top: 25px;
-    }
+footer .social-icon {
+    margin-top: 25px;
+}
 
 .footer-info {
     margin-right: 2em;
 }
 
-    .footer-info h2 {
-        color: #ffffff;
-        padding: 0;
-    }
+.footer-info h2 {
+    color: #ffffff;
+    padding: 0;
+}
 
 .footer_menu h2 {
     margin-top: 2em;
@@ -481,10 +530,10 @@ footer {
     width: 50%;
 }
 
-    .newsletter-form input[type="submit"]:hover {
-        background: #29ca8e;
-        border-color: transparent;
-    }
+.newsletter-form input[type="submit"]:hover {
+    background: #29ca8e;
+    border-color: transparent;
+}
 
 .newsletter-form .form-group span {
     color: #909090;
@@ -531,6 +580,7 @@ footer {
 }
 
 @media only screen and (max-width: 992px) {
+
     section,
     footer {
         padding: 60px 0;
@@ -565,7 +615,9 @@ footer {
         font-size: 2.5em;
     }
 
-    h1, h2, h3 {
+    h1,
+    h2,
+    h3 {
         line-height: normal;
     }
 
@@ -578,37 +630,37 @@ footer {
         text-align: center;
     }
 
-        .custom-navbar .navbar-brand,
-        .custom-navbar .nav li a {
-            line-height: normal;
-        }
+    .custom-navbar .navbar-brand,
+    .custom-navbar .nav li a {
+        line-height: normal;
+    }
 
-        .custom-navbar .nav li a {
-            padding: 10px;
-        }
+    .custom-navbar .nav li a {
+        padding: 10px;
+    }
 
-        .custom-navbar .navbar-brand,
-        .top-nav-collapse .navbar-brand {
-            color: #252525;
-            font-weight: 600;
-        }
+    .custom-navbar .navbar-brand,
+    .top-nav-collapse .navbar-brand {
+        color: #252525;
+        font-weight: 600;
+    }
 
-        .custom-navbar .nav li a,
-        .top-nav-collapse .nav li a {
-            color: #575757;
-        }
+    .custom-navbar .nav li a,
+    .top-nav-collapse .nav li a {
+        color: #575757;
+    }
 
-        .custom-navbar .navbar-nav.navbar-right li {
-            display: inline-block;
-        }
+    .custom-navbar .navbar-nav.navbar-right li {
+        display: inline-block;
+    }
 
     .footer-info {
         margin-right: 0;
     }
 
-        .footer-info.newsletter-form {
-            margin-bottom: 0;
-        }
+    .footer-info.newsletter-form {
+        margin-bottom: 0;
+    }
 
     .entry-form {
         display: block;

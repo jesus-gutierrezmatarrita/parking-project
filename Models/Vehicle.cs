@@ -1,6 +1,9 @@
-﻿namespace parking_project.Models
+﻿using System;
+using System.Collections.Generic;
+
+namespace parking_project.Models
 {
-    public class Vehicle
+    public partial class Vehicle
     {
         private int id;
         private string color;

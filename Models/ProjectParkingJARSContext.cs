@@ -7,7 +7,6 @@ namespace parking_project.Models
 {
     public partial class ProjectParkingJARSContext : DbContext
     {
-
         private readonly string _connectionString;
 
         public ProjectParkingJARSContext(string connectionString)

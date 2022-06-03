@@ -82,6 +82,7 @@ namespace parking_project.Models.Data
                 return customers;
 
             }
+
         }
         public Customer Get(string email)
         {
@@ -180,6 +181,7 @@ namespace parking_project.Models.Data
 
 
             return resultToReturn;
+            }
 
         }
 
