@@ -30,7 +30,7 @@
          if (customer != null) {
 
              $.ajax({
-                 url: "/Customers/Post",
+                 url: "/Customer/Post",
                  data: JSON.stringify(customer), //converte la variable estudiante en tipo json
                  type: "POST",
                  contentType: "application/json;charset=utf-8",
@@ -65,11 +65,11 @@ function GetCustomerByEmail(emailCustomer) {
         data: { email: emailCustomer },
         success: function (result) {
 
-            $('#idClient').val(result.id);// se ocupa para actualizar
-            $('#nameClient').val(result.name);
-            $('#lastNameClient').val(result.lastname);
-            $('#emailClient').val(result.email);
-            $('#phoneClient').val(result.phone);
+            $('#idClientU').val(result.id);// se ocupa para actualizar
+            $('#nameClientU').val(result.name);
+            $('#lastNameClientU').val(result.lastname);
+            $('#emailClientU').val(result.email);
+            $('#phoneClientU').val(result.phone);
         },
         error: function (errorMessage) {
             if (errorMessage === "no connection") {
@@ -79,7 +79,7 @@ function GetCustomerByEmail(emailCustomer) {
         }
     });
 }
-function Delete(id) {
+function DeleteCustomer(id) {
     var alert = confirm("Are you sure you want to delete this record?");
     if (alert) {
         $.ajax({
@@ -120,7 +120,7 @@ function LoadCustomers() {
                 html += '<td>' + item.lastname + '</td>';
                 html += '<td>' + item.email + '</td>';
                 html += '<td>' + item.phone + '</td>';
-                html += '<td><a href="#client" data-target="#modalUpdate" data-toggle="modal" onclick="GetCustomerByEmail(\'' + item.email + '\')">Edit</a> | <a href="#client" onclick="Delete(' + item.id + ')">Delete</a></td>';
+                html += '<td><a href="#client" data-target="#modalUpdate" data-toggle="modal" onclick="GetCustomerByEmail(\'' + item.email + '\')">Edit</a> | <a href="#client" onclick="DeleteCustomer(' + item.id + ')">Delete</a></td>';
                 html += '</tr>';
             });
 
@@ -136,16 +136,16 @@ function LoadCustomers() {
     });
 
 }
-function Update() {
+function UpdateCustomer() {
 
     var customer = {
 
-        id: $('#idClient').val(),
-        name: $('#nameClient').val(''),
-        lastname: $('#lastNameClient').val(''),
-        email: $('#emailClient').val(''),
-        password: $('#passwordClient').val(''),
-        phone: $('#phoneClient').val('')
+        id: $('#idClientU').val(),
+        name: $('#nameClientU').val(),
+        lastname: $('#lastNameClientU').val(),
+        email: $('#emailClientU').val(),
+        password: $('#passwordClientU').val(),
+        phone: $('#phoneClientU').val()
 
     };
 
@@ -157,20 +157,21 @@ function Update() {
             type: "POST",
             contentType: "application/json;charset=utf-8",
             dataType: "json",
-            success: function (result) {
 
-                $('#nameClient').val('');
-                $('#lastNameClient').val('');
-                $('#emailClient').val('');
-                $('#passwordClient').val('');
-                $('#phoneClient').val('');
+            success: function (result) {
+                $('#nameClientU').val('');
+                $('#lastNameClientU').val('');
+                $('#emailClientU').val('');
+                $('#passwordClientU').val('');
+                $('#phoneClientU').val('');
+                LoadCustomers()
             },
             error: function (errorMessage) {
                 if (errorMessage === "no connection") {
-                    $('#resultU').text("Error en la conexión.");
+                   
                 }
              
-                $('#passwordClient').val('');
+                $('#passwordClientU').val('');
             }
         });
 

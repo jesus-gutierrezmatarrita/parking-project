@@ -54,6 +54,7 @@ namespace parking_project.Controllers
         }
         public IActionResult Update([FromBody] Customer customer)
         {
+
             if (customer.Id == customerDAO.Get(customer.Email).Id)
             {
                 return Ok(customerDAO.Update(customer));
