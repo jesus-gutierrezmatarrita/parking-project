@@ -125,9 +125,8 @@ function LoadCustomers() {
             });
 
             $('#client-tbody').html(html);
-            $(document).ready(function () {
-                $('#client-table');
-            });
+            $('#client-table').DataTable();
+           
         },
         error: function (errorMessage) {
             // alert("Error");
