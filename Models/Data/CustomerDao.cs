@@ -30,7 +30,7 @@ namespace parking_project.Models.Data
                     command.CommandType = System.Data.CommandType.StoredProcedure;
 
                     command.Parameters.AddWithValue("@Name", customer.Name);
-                    command.Parameters.AddWithValue("@Email", customer.Lastname);
+                    command.Parameters.AddWithValue("@Lastname", customer.Lastname);
                     command.Parameters.AddWithValue("@Password", customer.Password);
                     command.Parameters.AddWithValue("@Email",customer.Email );
                     command.Parameters.AddWithValue("@Phone", customer.Phone);

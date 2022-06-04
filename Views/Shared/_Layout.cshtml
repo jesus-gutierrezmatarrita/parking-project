@@ -22,6 +22,7 @@
 
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="css/Home.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
 
 </head>
 
@@ -172,7 +173,9 @@
 
                 <div class="modal-footer">
 
-                    <button type="submit" class="btn btn-success" onclick="Add()" id="form-submit">Sign Up</button>
+                    <label id="result-c"></label>
+
+                    <button type="submit" class="btn btn-success" onclick="return Add();" id="form-submit">Sign Up</button>
 
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
                 </div>
@@ -684,6 +687,7 @@
     <script src="js/custom.js"></script>
     <script src="js/Customer.js"></script>
     <script src="bootstrap.bundle.min.js"></script>
+    <script src = "https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
 
 </body>
 

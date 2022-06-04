@@ -30,15 +30,17 @@
          if (customer != null) {
 
              $.ajax({
-                 url: "/Customer/Post",
+                 url: "/Customer/Insert",
                  data: JSON.stringify(customer), //converte la variable estudiante en tipo json
                  type: "POST",
                  contentType: "application/json;charset=utf-8",
                  dataType: "json",
                  success: function (result) {
+                     $('#result-c').text("Added successfully");
+                     $('#result-c').css('color', 'green');
                      $('#nameClient').val('');
                      $('#lastNameClient').val('');
-                     $('#email').val('');
+                     $('#emailClient').val('');
                      $('#passwordClient').val('');
                      $('#phoneClient').val('');
                      
