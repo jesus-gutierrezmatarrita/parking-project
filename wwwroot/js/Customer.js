@@ -14,7 +14,7 @@
 
    
 
-     function Add() {
+     function AddCustomer() {
 
          var customer = {
              name: $('#nameClient').val(),
@@ -30,7 +30,7 @@
          if (customer != null) {
 
              $.ajax({
-                 url: "/Customer/Post",
+                 url: "/Customer/Insert",
                  data: JSON.stringify(customer), //converte la variable estudiante en tipo json
                  type: "POST",
                  contentType: "application/json;charset=utf-8",
@@ -38,14 +38,14 @@
                  success: function (result) {
                      $('#nameClient').val('');
                      $('#lastNameClient').val('');
-                     $('#email').val('');
+                     $('#emailClient').val('');
                      $('#passwordClient').val('');
                      $('#phoneClient').val('');
                      
                  },
                  error: function (errorMessage) {
                      if (errorMessage === "no connection") {
-                         $('#result').text("Error en la conexión.");
+              
                      }
                      
                      $('#passwordClient').val('');
@@ -53,6 +53,46 @@
              });
 
          }
+}
+
+function AddClient() {
+
+    var customer = {
+        name: $('#nameUSer').val(),
+        lastName: $('#lastNameUser').val(),
+        password: $('#emailUser').val(),
+        email: $('#phoneUser').val(),
+        phone: parseInt($('#passwordUser').val()),
+    };
+
+
+    if (customer != null) {
+
+        $.ajax({
+            url: "/Customer/Insert",
+            data: JSON.stringify(customer), //converte la variable estudiante en tipo json
+            type: "POST",
+            contentType: "application/json;charset=utf-8",
+            dataType: "json",
+            success: function (result) {
+                $('#nameUSer').val('');
+                $('#lastNameUser').val('');
+                $('#emailUser').val('');
+                $('#phoneUser').val('');
+                $('#passwordUser').val('');
+                LoadCustomers();
+
+            },
+            error: function (errorMessage) {
+                if (errorMessage === "no connection") {
+                    $('#result').text("Error en la conexión.");
+                }
+
+                $('#passwordUser').val('');
+            }
+        });
+
+    }
 
 
 }
