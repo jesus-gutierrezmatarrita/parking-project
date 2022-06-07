@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Muli:300,700|Nunito');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Lobster');
 
 body {
     background: #000000;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Raleway';
     overflow-x: hidden;
     padding-top: 70px;
 }
@@ -19,7 +20,7 @@ h4,
 h5,
 h6,
 small {
-    font-family: 'Muli', sans-serif;
+    font-family: 'Raleway';
     font-weight: bold;
     line-height: inherit;
 }
@@ -356,21 +357,26 @@ a:focus {
   -----------------------------------------*/
 
 .modal-content {
-    background-color: black;
+    background-color: #141414;
 }
 
-.form-control {
+.form-control, #valueFare {
     width: 250px;
     background-color: transparent;
-
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    border-bottom-color: #546561;
 }
 
 .form-group label {
-    color: cadetblue;
+    color: #546561;
+    font-family: 'Raleway';
 }
 
 #myModalLabel {
-    color: aquamarine;
+    color: cadetblue;
+    font-family: 'Lobster';
 }
 
 
@@ -408,10 +414,6 @@ a:focus {
     margin: 20px;
 }
 
-#square h3 {
-    margin-left: 10px;
-}
-
 /*---------------------------------------
       PARKING             
   -----------------------------------------*/
@@ -430,25 +432,62 @@ a:focus {
     width: 861px;
     height: 650px;
     padding: 7%;
+    font-family: 'Raleway';
 }
 
+thead{
+    color: lightseagreen;
+}
+
+tbody{
+    color: lightgrey;
+}
 /*---------------------------------------
       PRICES            
   -----------------------------------------*/
-
 #prices {
     padding: 5%;
 }
 
-/*
-#calculate {
-    background-color: transparent;
-    color: aquamarine;
-    width: 75px;
-    border-color:aquamarine;
-}
-*/
+/*---------------------------------------
+      VEHICLE             
+  -----------------------------------------*/
 
+#vehicle {
+    width: 861px;
+    height: 700px;
+    padding: 5%;
+}
+
+/*---------------------------------------
+      FARE             
+  -----------------------------------------*/
+
+#fare {
+    width: 861px;
+    height: 700px;
+    padding: 5%;
+}
+
+/*---------------------------------------
+      ROLE             
+  -----------------------------------------*/
+
+#role {
+    width: 861px;
+    height: 700px;
+    padding: 5%;
+}
+
+/*---------------------------------------
+      USER             
+  -----------------------------------------*/
+
+#user {
+    width: 861px;
+    height: 700px;
+    padding: 5%;
+}
 
 /*---------------------------------------
      FOOTER              
@@ -557,22 +596,25 @@ footer .social-icon {
 
 #squareAdmin {
     background-color: #141414;
-    height: 150px;
+    height: 175px;
     width: 150px;
     border-radius: 50px;
-    padding-left: 9%;
-    padding-top: 9%;
-    margin-bottom:10px;
+    text-align: center;
+    margin-left: 20%;
 }
 
-    #squareAdmin h3 {
-        margin-left: 3px;
-    }
+#titleAdmin {
+    height: 0px;
+}
+
+#dropM{
+    text-align: center;
+    font-weight:normal;
+}
 
 /*---------------------------------------
      RESPONSIVE STYLES              
   -----------------------------------------*/
-
 @media screen and (max-width: 1170px) {
     .custom-navbar .navbar-nav.navbar-nav-first {
         margin-left: inherit;
