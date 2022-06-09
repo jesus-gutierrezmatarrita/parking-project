@@ -197,6 +197,16 @@ a:focus {
     border-radius: 6px;
 }
 
+#hereVehicle {
+    /*border-color: #4f9f9a;*/
+    background-color: transparent;
+    color: burlywood;
+    /*width: 150px;*/
+    height: 30px;
+    margin-left: 10px;
+    margin-top: 15px;
+}
+
 /*---------------------------------------
       MENU              
   -----------------------------------------*/
@@ -222,7 +232,7 @@ a:focus {
 }
 
 .custom-navbar .navbar-nav.navbar-nav-first {
-    margin-left: 39em;
+    margin-left: 30em;
 }
 
 .custom-navbar .navbar-nav.navbar-right li a {
@@ -385,6 +395,11 @@ a:focus {
     margin-top: 140px;
 }
 
+#modalProfile h4{
+    color: burlywood;
+    font-family: 'Raleway';
+}
+
 #calcu .form-group {
     display: flex;
     align-items: center;
@@ -484,6 +499,17 @@ tbody{
   -----------------------------------------*/
 
 #user {
+    width: 861px;
+    height: 700px;
+    padding: 5%;
+}
+
+
+/*---------------------------------------
+      Reserves Parking             
+  -----------------------------------------*/
+
+#resvParking {
     width: 861px;
     height: 700px;
     padding: 5%;
