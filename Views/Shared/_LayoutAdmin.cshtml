@@ -59,6 +59,8 @@
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-nav-first">
                     <li><a href="#topAdmin" class="smoothScroll">Home</a></li>
+                    <li><a href="#home" class="smoothScroll">Options</a></li>
+                    <li><a href="#resvParking" id="reservesParking" class="smoothScroll">Reserves</a></li>
                     <li><a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" id="dropdownMenuLink" aria-haspopup="true" aria-expanded="false">
                         Add
                     </a>
@@ -67,6 +69,16 @@
                                 <h5 id="dropM" role="button" class="dropdown-item" data-target="#modalUser" data-toggle="modal">User</h5>
                                 <h5 id="dropM" role="button" class="dropdown-item" data-target="#modalRole" data-toggle="modal">Role</h5>
                                 <h5 id="dropM" role="button" class="dropdown-item" data-target="#modalFare" data-toggle="modal">Fare</h5>
+                                <h5 id="dropM" role="button" class="dropdown-item" data-target="#modalVehicle" data-toggle="modal">Vehicle</h5>
+                            </div>
+                    </li>
+                    <li><a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" id="dropdownMenuReports" aria-haspopup="true" aria-expanded="false">
+                        Reports
+                    </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuReports">
+                                <h5 id="dropM" role="button" class="dropdown-item" >Reserves</h5>
+                                <h5 id="dropM" role="button" class="dropdown-item" >Clients</h5>
+                                <h5 id="dropM" role="button" class="dropdown-item" >Parking Lots</h5>
                             </div>
                     </li>
                     <li><a href="#footer" class="smoothScroll">Contact</a></li>
@@ -900,6 +912,167 @@
             </div>
         </div>
     </section>
+
+
+    <!-- RESERVES PARKING -->
+    <section id="resvParking">
+        <div class="container">
+            <div class="row">
+                <div class="section-title">
+                    <h2>Reserves Parking</h2>
+                </div>
+
+                <div class="col-md-12 col-sm-12">
+
+                    <div class="table-responsive">
+
+                        <table class="table .table-striped .table-dark" id="reservesP-table">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        ID
+                                    </th>
+                                    <th>
+                                        Date
+                                    </th>
+                                    <th>
+                                        Client
+                                    </th>
+                                    <th>
+                                        Vehicle 
+                                    </th>
+                                    <th>
+                                        Parking
+                                    </th>
+                                    <th>
+                                        Space
+                                    </th>
+                                    <th>
+                                        Action
+                                    </th>
+                 
+
+                                </tr>
+
+                            </thead>
+
+                            <tbody id="reservesP-tbody">
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+     <!-- Modal PROFILE -->
+    <div class="modal fade" id="modalProfile" role="dialog" aria-hidden="true" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h3 id="myModalLabel">My Profile</h3>
+                </div>
+
+                <!-- Modal Body -->
+
+
+                <div class="modal-body">
+                    <form action="" id="">
+                        <div class="form-group">
+                            <!-- Datos de la BD -->
+                            <label>Full Name</label>
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                        </div>
+
+                    </form>
+
+                </div>
+               
+
+                <!-- Modal Footer-->
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-info" data-dismiss="modal">Sign Out</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Modal PROFILE -->
+
+    <!-- Modal VEHICLE -->
+    <div class="modal fade" id="modalVehicle" role="dialog" aria-hidden="true" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h3 id="myModalLabel">Add Vehicle</h3>
+                </div>
+
+                <!-- Modal Body -->
+
+
+                <div class="modal-body">
+                    <form action="" id="">
+
+                        <div class="form-group">
+                            <div class="dropdown">
+                                <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" id="dropdownVehicle">
+                                    Type ▼
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownVehicle">
+                                    <li><a href="#">Car</a></li>
+                                    <li><a href="#">Motorcycle</a></li>
+                                    <li><a href="#">Bike</a></li>
+                                    <li><a href="#">Heavy-duty Vehicle</a></li>
+                                </ul>
+                            </div>
+                          </div> 
+                          
+                            <div class="form-group">
+                            <label>License Plate</label>
+                            <input type="text" name="licensePlate" id="licensePlate" class="form-control" required="">
+                            </div>
+                        <div class="form-group">
+                            <label>Trademark Car</label>
+                            <input type="text" name="trademark" id="trademark" class="form-control" required="">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Model</label>
+                            <input type="text" name="model" id="model" class="form-control" required="">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Color</label>
+                            <input type="text" name="color" id="color" class="form-control" required="">
+                        </div>
+                        
+                         
+                    </form>
+                </div>
+
+                <!-- Modal Footer-->
+
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-info" onsubmit="" id="">Add</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Modal VEHICLE -->
 
 
     <!-- FOOTER -->
