@@ -28,7 +28,7 @@
     </main>
 </div>
 
-<body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+<body id="topAdmin" data-spy="scroll" data-target=".navbar-collapse" data-offset="50" >
 
     <!-- PRE LOADER -->
     <section class="preloader">
@@ -58,13 +58,15 @@
             <!-- MENU LINKS -->
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-nav-first">
-                    <li><a href="#top" class="smoothScroll">Home</a></li>
+                    <li><a href="#topAdmin" class="smoothScroll">Home</a></li>
                     <li><a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" id="dropdownMenuLink" aria-haspopup="true" aria-expanded="false">
                         Add
                     </a>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                <a class="dropdown-item"  data-target="#modalParking" data-toggle="modal">Parking</a>
-                                <a class="dropdown-item"  data-target="#modalUser" data-toggle="modal">User</a>
+                                <h5 id="dropM" role="button" class="dropdown-item" data-target="#modalParking" data-toggle="modal">Parking</h5>
+                                <h5 id="dropM" role="button" class="dropdown-item" data-target="#modalUser" data-toggle="modal">User</h5>
+                                <h5 id="dropM" role="button" class="dropdown-item" data-target="#modalRole" data-toggle="modal">Role</h5>
+                                <h5 id="dropM" role="button" class="dropdown-item" data-target="#modalFare" data-toggle="modal">Fare</h5>
                             </div>
                     </li>
                     <li><a href="#footer" class="smoothScroll">Contact</a></li>
@@ -182,7 +184,7 @@
 
 
                 <div class="modal-body">
-                    <form action="" id="user">
+                    <form action="" id="userAdd">
                         <div class="form-group">
                             <div class="dropdown">
                                 <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" id="dropdownMenuButton">
@@ -236,38 +238,43 @@
     <!-- HOME -->
     <section id="home">
         <div class="container">
+            <br /><br /><br /><br /><br /><br />
                 <h2>Administrator Mode</h2>
                 <h4>Detailed listings</h4>
                 <div class="row">
 
                 <div class="col-xs-3">
                     <div id="squareAdmin">
-                        <h3>Vehicle</h3>
-                        @*<img src=~/images/vehicle.png />*@
-                        <a class="btn" id="hereAdmin" href="#">Here</a>
+                        <br />
+                        <img src=~/images/vehicle.png />
+                        <h3 id="titleAdmin">Vehicle</h3>
+                        <a class="btn" id="hereAdmin" href="#vehicle">Here</a>
                     </div>
                 </div>
 
                 <div class="col-xs-3">
                     <div id="squareAdmin">
-                        <h3>Client</h3>
-                        @*<img src=~/images/users.png />*@
-                        <a class="btn" id="hereAdmin" href="#client">Here</a>
+                        <br />
+                        <img src=~/images/ticket.png />
+                        <h3 id="titleAdmin">Fare</h3>
+                        <a class="btn" id="hereAdmin" href="#fare">Here</a>
                     </div>
                 </div>
 
                 <div class="col-xs-3">
                     <div id="squareAdmin">
-                        <h3>Parking</h3>
-                        @*<img src=~/images/location.png />*@
+                        <br />
+                        <img src=~/images/parking.png />
+                        <h3 id="titleAdmin">Parking</h3>
                         <a class="btn" id="hereAdmin" href="#parking">Here</a>
                     </div>
                 </div>
 
                 <div class="col-xs-3">
                     <div id="squareAdmin">
-                        <h3>Parking Space</h3>
-                        @*<img src=~/images/spaces.png />*@
+                        <br />
+                        <img src=~/images/spaces.png />
+                        <h3 id="titleAdmin">Parking Space</h3>
                         <a class="btn" id="hereAdmin" href="#">Here</a>
                     </div>
                 </div>
@@ -279,39 +286,39 @@
             <div class="row">
 
                 <div class="col-xs-3">
-                    <div id="squareAdmin">
-                        <h3>Role</h3>
-                        @*<img src=~/images/table.png />*@
-                        <a class="btn" id="hereAdmin" href="#">Here</a>
+                    <div id="squareAdmin"><br />
+                        <img src=~/images/rol.png />
+                        <h3 id="titleAdmin">Role</h3>
+                        <a class="btn" id="hereAdmin" href="#role">Here</a>
                     </div>
                 </div>
 
                 <div class="col-xs-3">
-                    <div id="squareAdmin">
-                        <h3>User</h3>
-                        @*<img src=~/images/user.png />*@
-                        <a class="btn" id="hereAdmin" href="#">Here</a>
+                    <div id="squareAdmin"><br />
+                        <img src=~/images/user.png />
+                        <h3 id="titleAdmin">User</h3>
+                        <a class="btn" id="hereAdmin" href="#user">Here</a>
                     </div>
                 </div>
 
                 <div class="col-xs-3">
-                    <div id="squareAdmin">
-                        <h3>Fare</h3>
-                        @*<img src=~/images/ticket.png />*@
-                        <a class="btn" id="hereAdmin" href="#">Here</a>
+                    <div id="squareAdmin"><br />
+                        <img src=~/images/client.png />
+                        <h3 id="titleAdmin">Client</h3>
+                        <a class="btn" id="hereAdmin" href="#client">Here</a>
                     </div>
                 </div>
 
                 <div class="col-xs-3">
-                    <div id="squareAdmin">
-                        <h3>My Profile</h3>
-                        @*<img src=~/images/profile.png />*@
+                    <div id="squareAdmin"><br />
+                        <img src=~/images/profile.png />
+                        <h3 id="titleAdmin">My Profile</h3>
                         <a class="btn" id="hereAdmin" data-target="#modalProfile" data-toggle="modal">Here</a>
                     </div>
                 </div>
-
+                <br />
             </div>
-
+            <br /><br /><br />
         </div>
     </section>
    
@@ -328,7 +335,7 @@
 
                     <div class="table-responsive">
 
-                        <table class="table table-bordered table-hover" id="parking-table">
+                        <table class="table .table-striped .table-dark" id="parking-table">
 
                             <thead>
 
@@ -365,6 +372,32 @@
         </div>
     </section>
 
+    <!-- Modal DELETE PARKING -->
+    <div class="modal fade" id="modalDELETEParking" role="dialog" aria-hidden="true" tabindex="-1">
+        <div class="modal-dialog ">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h3 id="myModalLabel">Delete Parking Lot</h3>
+                </div>
+
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <h4>Are you sure you want to delete this item?</h4>
+                </div>
+
+                <!-- Modal Footer-->
+                <div class="modal-footer">
+                    <label id="result-p"></label>
+                    <button type="submit" class="btn btn-info" onclick= "return " id="btn-delete-parking">Delete</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+     <!-- Modal DELETE PARKING -->
+
      <!-- CLIENT -->
     <section id="client">
         <div class="container">
@@ -377,7 +410,7 @@
 
                     <div class="table-responsive">
 
-                        <table class="table table-bordered table-hover" id="client-table">
+                        <table class="table .table-striped .table-dark" id="client-table">
 
                             <thead>
 
@@ -416,6 +449,7 @@
             </div>
         </div>
     </section>
+
          <!-- Modal UPDATE -->
      <div class="modal fade" id="modalUpdate" role="dialog" aria-hidden="true" tabindex="-1">
                         <div class="modal-dialog">
@@ -472,31 +506,330 @@
                     </div>
                     <!-- Modal SIGN UPDATE -->
 
-    <!-- Modal PROFILE -->
-    <div class="modal fade" id="modalProfile" role="dialog" aria-hidden="true" tabindex="-1">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <!-- Modal DELETE CLIENT -->
+    <div class="modal fade" id="modalDELETECustomer" role="dialog" aria-hidden="true" tabindex="-1">
+        <div class="modal-dialog ">
             <div class="modal-content">
 
                 <!-- Modal Header -->
                 <div class="modal-header">
-                    <h3 id="myModalLabel">MY PROFILE</h3>
+                    <h3 id="myModalLabel">Delete Customer</h3>
                 </div>
 
                 <!-- Modal Body -->
+                <div class="modal-body">
+                    <h4>Are you sure you want to delete this item?</h4>
+                </div>
+
+                <!-- Modal Footer-->
+                <div class="modal-footer">
+                    <label id="result-p"></label>
+                    <button type="submit" class="btn btn-info" onclick= "return " id="btn-delete-client">Delete</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+     <!-- Modal DELETE CLIENT -->
+
+      <!-- ROLE -->
+    <section id="role">
+        <div class="container">
+            <div class="row">
+                <div class="section-title">
+                    <h2>Role</h2>
+                </div>
+
+                <div class="col-md-12 col-sm-12">
+
+                    <div class="table-responsive">
+
+                        <table class="table .table-striped .table-dark" id="role-table">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        ID
+                                    </th>
+                                    <th>
+                                        Name
+                                    </th>
+                                    <th>
+                                        Action
+                                    </th>
+                 
+
+                                </tr>
+
+                            </thead>
+
+                            <tbody id="role-tbody">
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Modal ROLE Add -->
+     <div class="modal fade" id="modalRole" role="dialog" aria-hidden="true" tabindex="-1">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+
+                                <!-- Modal Header -->
+                                <div class="modal-header" >
+                                    <h3 id="myModalLabel">Add Role</h3>
+                                </div> 
+
+                                <!-- Modal Body -->
+
+                                
+                                   <div class="modal-body">
+                                        <form action="" id="formAddRole">
+
+                                             <div class="form-group">
+                                                <label>Name</label>
+                                                <input type="text" name="nameRole" id="nameRole" class="form-control" required="">
+                                             </div>    
+
+                                        </form>
+                                   </div>
+
+                                <!-- Modal Footer-->
+
+                                <div class="modal-footer">
+                                    <button type="submit" class="btn btn-info" onclick= "return ">Add</button>
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                    <!-- Modal ROLE ADD -->
+
+    <!-- Modal ROLE UPDATE -->
+     <div class="modal fade" id="modalUpdateRole" role="dialog" aria-hidden="true" tabindex="-1">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+
+                                <!-- Modal Header -->
+                                <div class="modal-header" >
+                                    <h3 id="myModalLabel">Update Role</h3>
+                                </div> 
+
+                                <!-- Modal Body -->
+
+                                
+                                   <div class="modal-body">
+                                        <form action="" id="formUpdateRole">
+
+                                             <div class="form-group">
+
+                                                <input type="text" name="id-r-u" id="id-r-u" hidden>
+                                                <label>Name</label>
+                                                <input type="text" name="nameRole-u" id="nameRole-u" class="form-control" required="">
+                                             </div>    
+
+                                        </form>
+                                   </div>
+
+                                <!-- Modal Footer-->
+
+                                <div class="modal-footer">
+                                    <button type="submit" class="btn btn-info" onclick= "return ">Update</button>
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                    <!-- Modal ROLE UPDATE -->
+
+                    <!-- Modal DELETE ROLE -->
+    <div class="modal fade" id="modalDELETERole" role="dialog" aria-hidden="true" tabindex="-1">
+        <div class="modal-dialog ">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h3 id="myModalLabel">Delete Role</h3>
+                </div>
+
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <h4>Are you sure you want to delete this item?</h4>
+                </div>
+
+                <!-- Modal Footer-->
+                <div class="modal-footer">
+                    <label id="result-p"></label>
+                    <button type="submit" class="btn btn-info" onclick= "return " id="btn-delete-role">Delete</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+     <!-- Modal DELETE ROLE -->
+
+    <!-- VEHICLE -->
+    <section id="vehicle">
+        <div class="container">
+            <div class="row">
+                <div class="section-title">
+                    <h2>VEHICLES</h2>
+                </div>
+
+                <div class="col-md-12 col-sm-12">
+
+                    <div class="table-responsive">
+
+                        <table class="table .table-striped .table-dark" id="vehicle-table">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        Lisence Plate
+                                    </th>
+                                    <th>
+                                        Trademark
+                                    </th>
+                                    <th>
+                                        Model
+                                    </th>
+                                    <th>
+                                        Color
+                                    </th>
+                                    <th>
+                                        Type
+                                    </th>
+                                    <th>
+                                        Action
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+                            <tbody id="vehicle-tbody">
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
+    <!-- FARE -->
+    <section id="fare">
+        <div class="container">
+            <div class="row">
+                <div class="section-title">
+                    <h2>FARE</h2>
+                </div>
+
+                <div class="col-md-12 col-sm-12">
+
+                    <div class="table-responsive">
+
+                        <table class="table .table-striped .table-dark" id="fare-table">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        ID
+                                    </th>
+                                    <th>
+                                        Value
+                                    </th>
+                                    <th>
+                                        Time
+                                    </th>
+                                    <th>
+                                        Vehicle Type
+                                    </th>
+                                    <th>
+                                        Action
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+                            <tbody id="fare-tbody">
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal FARE -->
+    <div class="modal fade" id="modalFare" role="dialog" aria-hidden="true" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h3 id="myModalLabel">Add Fare</h3>
+                </div>
+
+                <!-- Modal Body -->
                 <div class="modal-body">
                     <form action="" id="">
+
                         <div class="form-group">
-                            <!-- Datos de la BD -->
-                            <label>Full Name</label>
-                        </div>
+                            <div class="dropdown">
+                                <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" id="dropdownFARELocation">
+                                    Location ▼
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownFARELocation">
+                                    <li><a href="#">DATOS BD</a></li>
+                                    <li><a href="#"></a></li>
+                                    
+                                </ul>
+                            </div>
+                         </div>
+
                         <div class="form-group">
-                            <label>Email</label>
-                        </div>
+                            <input type="number" name="valueFare" id="valueFare" required="" placeholder="Value">
+                            <div class="dropdown">
+                                <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" id="dropdownFARE">
+                                    ▼
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownFARE">
+                                    <li><a href="#">Hour</a></li>
+                                    <li><a href="#">Day</a></li>
+                                    <li><a href="#">Weekly</a></li>
+                                    <li><a href="#">Monthly</a></li>
+                                    <li><a href="#">Annual</a></li>
+                                </ul>
+                            </div>
+                         </div>
+                            
                         <div class="form-group">
-                            <label>Password</label>
-                        </div>
+                            <label>Space</label>
+                            <div class="dropdown">
+                                <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" id="dropdownFARE">
+                                    Type ▼
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownFARE">
+                                    <li><a href="#">Preferential Space</a></li>
+                                    <li><a href="#">Car</a></li>
+                                    <li><a href="#">Motorcycle</a></li>
+                                    <li><a href="#">Bike</a></li>
+                                    <li><a href="#">Heavy-duty Vehicle</a></li>
+                                </ul>
+                            </div>
+                         </div>
 
                     </form>
                 </div>
@@ -504,13 +837,70 @@
                 <!-- Modal Footer-->
 
                 <div class="modal-footer">
-                    <button type="button" data-dismiss="modal">Sign Out</button>
+                    <button type="submit" class="btn btn-info" onsubmit="" id="">Add</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
                 </div>
 
             </div>
         </div>
     </div>
-    <!-- Modal PROFILE -->
+    <!-- Modal FARE -->
+
+    <!-- USER -->
+    <section id="user">
+        <div class="container">
+            <div class="row">
+                <div class="section-title">
+                    <h2>USER</h2>
+                </div>
+
+                <div class="col-md-12 col-sm-12">
+
+                    <div class="table-responsive">
+
+                        <table class="table .table-striped .table-dark" id="user-table">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        ID
+                                    </th>
+                                    <th>
+                                        Name
+                                    </th>
+                                    <th>
+                                        Lastname
+                                    </th>
+                                    <th>
+                                        Email
+                                    </th>
+                                    <th>
+                                        Phone
+                                    </th>
+                                    <th>
+                                        Role
+                                    </th>
+                                    <th>
+                                        Action
+                                    </th>
+                 
+
+                                </tr>
+
+                            </thead>
+
+                            <tbody id="user-tbody">
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <!-- FOOTER -->
     <footer id="footer">

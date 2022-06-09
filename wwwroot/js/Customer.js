@@ -122,7 +122,8 @@ function LoadCustomers() {
                 html += '<td>' + item.lastname + '</td>';
                 html += '<td>' + item.email + '</td>';
                 html += '<td>' + item.phone + '</td>';
-                html += '<td><a href="#client" data-target="#modalUpdate" data-toggle="modal" onclick="GetCustomerByEmail(\'' + item.email + '\')">Edit</a> | <a href="#client" onclick="DeleteCustomer(' + item.id + ')">Delete</a></td>';
+                /*html += '<td><a href="#client" data-target="#modalUpdate" data-toggle="modal" onclick="GetCustomerByEmail(\'' + item.email + '\')">Edit</a> | <a href="#client" onclick="DeleteCustomer(' + item.id + ')">Delete</a></td>';*/
+                html += '<td><a href="#client" role="button" class="button" data-target="#modalUpdate" data-toggle="modal"><img src="/images/editar.png" onclick="GetCustomerByEmail(\'' + item.email + '\')"></a> | <a role="button" class="button" data-target="#modalDELETECustomer" data-toggle="modal"><img src="/images/borrar.png"></a></td>';
                 html += '</tr>';
             });
 

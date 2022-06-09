@@ -65,7 +65,8 @@ function LoadParkings() {
                 html += '<td>' + item.name + '</td>';
                 html += '<td>' + item.location + '</td>';
                 html += '<td>' + item.capacity + '</td>';
-                html += '<td><a href="#parking" data-target="#modalEditParking" data-toggle="modal" onclick="GetParkingById(\'' + item.id + '\')">Edit</a> | <a href="#parking" onclick="DeleteParking(' + item.id + ')">Delete</a></td>';
+                /*html += '<td><a href="#parking" data-target="#modalEditParking" data-toggle="modal" onclick="GetParkingById(\'' + item.id + '\')">Edit</a> | <a href="#parking" onclick="DeleteParking(' + item.id + ')">Delete</a></td>';*/
+                html += '<td><a href="#parking" role="button" class="button" data-target="#modalEditParking" data-toggle="modal" onclick="GetParkingById(\'' + item.id + '\')"><img src="/images/editar.png"></a> | <a role="button" class="button" data-target="#modalDELETEParking" data-toggle="modal"><img src="/images/borrar.png"></a></td>';
                 html += '</tr>';
             });
 
