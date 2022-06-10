@@ -792,43 +792,34 @@
                                     Location ▼
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownFARELocation">
-                                    <li><a href="#">DATOS BD</a></li>
-                                    <li><a href="#"></a></li>
+                         
                                     
                                 </ul>
                             </div>
                          </div>
 
                         <div class="form-group">
-                            <input type="number" name="valueFare" id="valueFare" required="" placeholder="Value">
-                            <div class="dropdown">
-                                <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" id="dropdownFARE">
-                                    ▼
+                           <div class="dropdown">
+                                <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" id="dropdownFARECategory">
+                                     Category ▼
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownFARE">
-                                    <li><a href="#">Hour</a></li>
-                                    <li><a href="#">Day</a></li>
-                                    <li><a href="#">Weekly</a></li>
-                                    <li><a href="#">Monthly</a></li>
-                                    <li><a href="#">Annual</a></li>
                                 </ul>
                             </div>
                          </div>
                             
                         <div class="form-group">
-                            <label>Space</label>
                             <div class="dropdown">
-                                <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" id="dropdownFARE">
-                                    Type ▼
+                                <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" id="dropdownFARETime">
+                                     Unit Time ▼
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownFARE">
-                                    <li><a href="#">Preferential Space</a></li>
-                                    <li><a href="#">Car</a></li>
-                                    <li><a href="#">Motorcycle</a></li>
-                                    <li><a href="#">Bike</a></li>
-                                    <li><a href="#">Heavy-duty Vehicle</a></li>
                                 </ul>
                             </div>
+                         </div>
+                         <div class="form-group">
+                              <label>Price: </label>
+                             <input type="text" name="priceFare" id="priceFare" class="form-control" required="">               
                          </div>
 
                     </form>
@@ -948,6 +939,7 @@
     <script src="js/custom.js"></script>
     <script src="js/Customer.js"></script>
     <script src="js/Parking.js"></script>
+    <script src="js/Fare.js"></script>
     <script src="bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src = "https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
