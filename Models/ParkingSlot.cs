@@ -8,8 +8,9 @@ namespace parking_project.Models
         public int SlotId { get; set; }
         public string State { get; set; } = null!;
         public string Type { get; set; } = null!;
-        public int ParkingId { get; set; }
         public double? Price { get; set; }
+        public int ParkingId { get; set; }
+
 
         public virtual Parking Parking { get; set; } = null!;
     }
