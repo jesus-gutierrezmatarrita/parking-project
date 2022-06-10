@@ -2,6 +2,7 @@
 using parking_project.Models;
 using parking_project.Models.Data;
 using System.Diagnostics;
+using parking_project.Models.Domain;
 
 namespace parking_project.Controllers
 {
@@ -11,12 +12,14 @@ namespace parking_project.Controllers
         private readonly ILogger<HomeController> _logger;
         private readonly IConfiguration _configuration;
         CustomerDao customerDAO;
+        Email email;
 
         public CustomerController(ILogger<HomeController> logger, IConfiguration configuration)
         {
             _logger = logger;
             _configuration = configuration;
             customerDAO = new CustomerDao(_configuration);
+            email = new Email();
             //TODO:instantiate studentDAO only once here
 
         }
@@ -31,9 +34,12 @@ namespace parking_project.Controllers
         {
             if (customerDAO.Get(customer.Email).Email == null)
             {
-
+             
                 int resultToReturn = customerDAO.Insert(customer);
+                email.SendEmail(customer.Email, "Nuevo Usuario", customer.Name + " " + customer.Lastname +
+", ha sido añadido satisfactoriamente. ");
                 return Ok(resultToReturn);
+
             }
             else
             {

@@ -2,9 +2,6 @@
 
 ﻿$(document).ready(function () {
      
-
-
-    
       LoadCategorys(); 
      /* LoadParkings();*/
      /* LoadUnitTime();*/
