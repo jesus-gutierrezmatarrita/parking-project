@@ -8,6 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Beiyuan.WebSystem.UI" Version="3.1.0" />
+    <PackageReference Include="Codentia.Common.WebControls.dll" Version="3.0.0.65" />
     <PackageReference Include="EntityFramework" Version="6.2.0" />
     <PackageReference Include="Microsoft.AspNet.WebApi.Owin" Version="5.2.8" />
     <PackageReference Include="Microsoft.AspNetCore.Owin" Version="6.0.5" />
@@ -18,7 +20,11 @@
     </PackageReference>
     <PackageReference Include="Microsoft.Owin" Version="4.2.2" />
     <PackageReference Include="Microsoft.Owin.Host.SystemWeb" Version="4.2.2" />
+    <PackageReference Include="Microsoft.Toolkit.Wpf.UI.Controls.WebView" Version="6.1.2" />
+    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.1210.39" />
+    <PackageReference Include="Stack247.System.Web.UI.DataBinder" Version="1.0.0" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="6.0.0" />
   </ItemGroup>
 
 </Project>

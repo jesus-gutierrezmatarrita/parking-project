@@ -265,6 +265,7 @@
                         <img src=~/images/4.png />
                         <h3>My Profile</h3>
                         <a class="btn" id="here" data-target="#modalProfile" data-toggle="modal">Here</a>
+                        <a class="btn" id="hereVehicle" data-target="#modalVehicle" data-toggle="modal">New Vehicle</a>
                     </div>
                 </div>
 
@@ -626,7 +627,45 @@
                         </div>
 
                     </form>
+
+                    <h4>My Vehicles</h4>
+
+                    <table class="table .table-striped .table-dark" id="vehicle-table">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        Lisence Plate
+                                    </th>
+                                    <th>
+                                        Trademark
+                                    </th>
+                                    <th>
+                                        Model
+                                    </th>
+                                    <th>
+                                        Color
+                                    </th>
+                                    <th>
+                                        Type
+                                    </th>
+                                    <th>
+                                        Action
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+                            <tbody id="vehicle-tbody">
+                            </tbody>
+
+                        </table>
+
                 </div>
+               
 
                 <!-- Modal Footer-->
 
@@ -638,6 +677,72 @@
         </div>
     </div>
     <!-- Modal PROFILE -->
+
+    <!-- Modal VEHICLE -->
+    <div class="modal fade" id="modalVehicle" role="dialog" aria-hidden="true" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h3 id="myModalLabel">Add Vehicle</h3>
+                </div>
+
+                <!-- Modal Body -->
+
+
+                <div class="modal-body">
+                    <form action="" id="">
+
+                        <div class="form-group">
+                            <div class="dropdown">
+                                <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" id="dropdownVehicle">
+                                    Type ▼
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownVehicle">
+                                    <li><a href="#">Car</a></li>
+                                    <li><a href="#">Motorcycle</a></li>
+                                    <li><a href="#">Bike</a></li>
+                                    <li><a href="#">Heavy-duty Vehicle</a></li>
+                                </ul>
+                            </div>
+                          </div> 
+                          
+                            <div class="form-group">
+                            <label>License Plate</label>
+                            <input type="text" name="licensePlate" id="licensePlate" class="form-control" required="">
+                            </div>
+                        <div class="form-group">
+                            <label>Trademark Car</label>
+                            <input type="text" name="trademark" id="trademark" class="form-control" required="">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Model</label>
+                            <input type="text" name="model" id="model" class="form-control" required="">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Color</label>
+                            <input type="text" name="color" id="color" class="form-control" required="">
+                        </div>
+                        
+                         
+                    </form>
+                </div>
+
+                <!-- Modal Footer-->
+
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-info" onsubmit="" id="">Add</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Modal VEHICLE -->
+
     <!-- FOOTER -->
     <footer id="footer">
         <div class="container">

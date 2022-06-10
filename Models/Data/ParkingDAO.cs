@@ -56,12 +56,9 @@ namespace parking_project.Models.Data
                     connection.Open();
                     SqlCommand command = new SqlCommand("InsertParkingSlot", connection);
                     command.CommandType = System.Data.CommandType.StoredProcedure;
-
-                    command.Parameters.AddWithValue("@id", parkingSlot.SlotId);
-                    command.Parameters.AddWithValue("@state", parkingSlot.State);
                     command.Parameters.AddWithValue("@type", parkingSlot.Type);
-                    command.Parameters.AddWithValue("@parkingId", parkingSlot.ParkingId);
                     command.Parameters.AddWithValue("@price", parkingSlot.Price);
+                    command.Parameters.AddWithValue("@parkingId", parkingSlot.ParkingId);
 
                     resultToReturn = command.ExecuteNonQuery();
                     connection.Close();
@@ -131,9 +128,9 @@ namespace parking_project.Models.Data
                         SlotId = Convert.ToInt32(sqlDataReader["SlotId"]),
                         State = sqlDataReader["State"].ToString(),
                         Type = sqlDataReader["Type"].ToString(),
-                        Price = Convert.ToInt32(sqlDataReader["Price"])
+                        Price = Convert.ToInt32(sqlDataReader["Price"]),
+                        Parking = new Parking(0, sqlDataReader["ParkingName"].ToString(), null, 0)
                     });
-
                 }
 
                 connection.Close();
@@ -307,6 +304,45 @@ namespace parking_project.Models.Data
                     connection.Close();
 
                     return parking;
+                }
+            }
+            catch (Exception ex)
+            {
+                exception = ex;
+                throw exception;
+            }
+        }
+
+        public ParkingSlot GetParkingSlotById(int id)
+        {
+            ParkingSlot parkingSlot = new ParkingSlot();
+            Exception? exception = new Exception();
+            try
+            {
+
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+
+                    connection.Open();
+                    SqlCommand command = new SqlCommand("GetParkingSlot", connection);
+                    command.CommandType = System.Data.CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@Id", id);
+
+                    SqlDataReader sqlDataReader = command.ExecuteReader();
+
+
+                    if (sqlDataReader.Read())
+                    {
+                        parkingSlot.SlotId = Convert.ToInt32(sqlDataReader.GetInt32(0));
+                        parkingSlot.State = sqlDataReader.GetString(1);
+                        parkingSlot.Type = sqlDataReader.GetString(2);
+                        parkingSlot.Price = Convert.ToDouble(sqlDataReader.GetDouble(3));
+                        parkingSlot.Parking = new Parking(Convert.ToInt32(sqlDataReader.GetInt32(4)), null, null, 0);
+                    }
+
+                    connection.Close();
+
+                    return parkingSlot;
                 }
             }
             catch (Exception ex)
