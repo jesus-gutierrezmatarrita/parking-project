@@ -9,23 +9,21 @@
          
          return false;
      });
-     
 
 
-   
+function AddCustomer() {
+    +
 
-     function Add() {
 
          var customer = {
-             name: $('#nameClient').val(),
-             lastName: $('#lastNameClient').val(),
-             password: $('#passwordClient').val(),
-             email: $('#emailClient').val(),
-             phone: parseInt($('#phoneClient').val()),
+             name: $('#nameUSer').val(),
+             lastName: $('#lastNameUser').val(),
+             password: $('#passwordUser').val(),
+             email: $('#emailUser').val(),
+             phone: parseInt($('#phoneUser').val()),
          };
 
-       
-
+      
 
          if (customer != null) {
 
@@ -36,21 +34,19 @@
                  contentType: "application/json;charset=utf-8",
                  dataType: "json",
                  success: function (result) {
-                     $('#result-c').text("Added successfully");
-                     $('#result-c').css('color', 'green');
-                     $('#nameClient').val('');
-                     $('#lastNameClient').val('');
-                     $('#emailClient').val('');
-                     $('#passwordClient').val('');
-                     $('#phoneClient').val('');
+                     $('#nameUSer').val('');
+                     $('#lastNameUser').val('');
+                     $('#emailUser').val('');
+                     $('#passwordUser').val('');
+                     $('#phoneUser').val('');
                      
                  },
                  error: function (errorMessage) {
                      if (errorMessage === "no connection") {
-                         $('#result').text("Error en la conexión.");
+                         $('#result-c').text("Error en la conexión.");
                      }
                      
-                     $('#passwordClient').val('');
+                     $('#passwordUser').val('');
                  }
              });
 
