@@ -443,7 +443,7 @@
 
                 <!-- Modal Header -->
                 <div class="modal-header">
-                    <h3 id="modalLabelSlot">Add Parking Slot</h3>
+                    <h3 id="modalLabelSlot">Add new parking slot</h3>
                 </div>
 
                 <!-- Modal Body -->
@@ -452,17 +452,17 @@
                 <div class="modal-body">
                     <form action="" id="">
                         <div class="form-group">
-                            <select class="form-control" id="vehicle-type-dropdown" name="vehicle-type-dropdown" required>
+                            <select class="form-control" id="vehicleTypeDropdown" name="vehicle-type-dropdown" required>
                             </select>
-                        </div>
-                        <div class="form-group">
-                            <label>Price</label>
-                             <input type="number" name="price" id="price" class="form-control" min="0" step="5" value="0" required>
                         </div>
                         <div class="form-group">
                             <label>Parking</label>
                             <select class="form-control" id="parkingDropdown" name="parkingDropdown" required>
                             </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Price</label>
+                            <input type="number" name="price" id="slotPrice" class="form-control" min="0" step="5" value="0" required>
                         </div>
 
                     </form>
@@ -472,7 +472,7 @@
 
                 <div class="modal-footer">
                     <label id="result-p"></label>
-                    <button type="submit" class="btn btn-info" onclick= "AddParking()" id="btn-add-parking">Add</button>
+                    <button type="submit" class="btn btn-info" onclick= "AddParkingSlot()" id="btn-add-parking-slot">Add</button>
                     <button type="button" class="btn btn-danger" onclick= "ClearResultLabel()" data-dismiss="modal">Close</button>
 
                 </div>
@@ -481,7 +481,7 @@
         </div>
     </div>
 
-    <div class="modal fade" id="modalEditParking" role="dialog" aria-hidden="true" tabindex="-1">
+    <div class="modal fade" id="modalEditParkingSlot" role="dialog" aria-hidden="true" tabindex="-1">
         <div class="modal-dialog ">
             <div class="modal-content">
 
@@ -496,20 +496,27 @@
                 <div class="modal-body">
                     <form action="" id="">
                         <div class="form-group">
-                            <input type="text" name="id" id="id-p-u" hidden>
+                            <input type="text" name="id" id="id-ps-u" hidden>
                         </div>
                         <div class="form-group">
-                            <!-- Datos de la BD -->
-                            <label>Name</label>
-                             <input type="text" name="nameParking" id="nameParking-u" class="form-control" required="">
+                            <select class="form-control" id="slotState" name="slotState" required>
+                                <option value="-1" selected>Choose a state</option>
+                                <option value="F">Available</option>
+                                <option value="B">Not available</option>
+                            </select>
                         </div>
                         <div class="form-group">
-                            <label>Location</label>
-                             <input type="text" name="location" id="location-u" class="form-control" required="">
+                            <select class="form-control" id="vehicleTypeDropdown-u" name="vehicle-type-dropdown" required>
+                            </select>
                         </div>
                         <div class="form-group">
-                            <label>Capacity</label>
-                             <input type="number" name="capacity" id="capacity-u" class="form-control" required="">
+                            <label>Parking</label>
+                            <select class="form-control" id="parkingDropdown-u" name="parkingDropdown" required>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Price</label>
+                            <input type="number" name="price" id="slotPrice-u" class="form-control" min="0" step="5" value="0" required>
                         </div>
 
                     </form>
@@ -519,7 +526,7 @@
 
                 <div class="modal-footer">
                     <label id="result-p-u"></label>
-                    <button type="submit" class="btn btn-info" onclick= "return UpdateParking();" id="btn-update-parking">Save</button>
+                    <button type="submit" class="btn btn-info" onclick= "return UpdateParkingSlot();" id="btn-update-parkingSlot">Save</button>
                     <button type="button" class="btn btn-danger" onclick= "ClearResultLabel()" data-dismiss="modal">Close</button>
 
                 </div>
@@ -529,13 +536,13 @@
     </div>
 
     <!-- Modal DELETE PARKING -->
-    <div class="modal fade" id="modalDELETEParking" role="dialog" aria-hidden="true" tabindex="-1">
+    <div class="modal fade" id="modalDELETEParkingSlot" role="dialog" aria-hidden="true" tabindex="-1">
         <div class="modal-dialog ">
             <div class="modal-content">
 
                 <!-- Modal Header -->
                 <div class="modal-header">
-                    <h3 id="myModalLabel">Delete Parking Lot</h3>
+                    <h3 id="modalLabelDelete">Delete Parking Slot</h3>
                 </div>
 
                 <!-- Modal Body -->
@@ -545,14 +552,14 @@
 
                 <!-- Modal Footer-->
                 <div class="modal-footer">
-                    <label id="result-p"></label>
-                    <button type="submit" class="btn btn-info" onclick= "return " id="btn-delete-parking">Delete</button>
+                    <label id="result-ps"></label>
+                    <button type="submit" class="btn btn-info" onclick= "return DeleteParkingSlot()" id="btn-delete-parkingSlot">Delete</button>
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
     </div>
-     <!-- Modal DELETE PARKING -->
+     <!-- Modal DELETE PARKING SLOT -->
 
      <!-- CLIENT -->
     <section id="client">

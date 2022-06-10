@@ -69,5 +69,11 @@ namespace parking_project.Controllers
             Parking parking = parkingDao.GetById(id);
             return Ok(parking);
         }
+
+        public IActionResult GetParkingSlotById(int id)
+        {
+            ParkingSlot parkingSlot = parkingDao.GetParkingSlotById(id);
+            return Ok(parkingSlot);
+        }
     }
 }

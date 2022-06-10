@@ -127,6 +127,31 @@ function GetParkingById(idParking) {
     });
 }
 
+function GetParkingSlotById(idParking) {
+    var id = 0;
+    $.ajax({
+        url: "/Parking/GetParkingSlotById",
+        type: "GET",
+        data: { id: idParking },
+        success: function (result) {
+            $('#id-ps-u').val(result.slotId);
+
+            LoadVehiclesTypeDropDownU();
+
+            $('#slotPrice-u').val(result.price)
+
+            LoadParkingsToDropdownU();
+        },
+        error: function (errorMessage) {
+            if (errorMessage === "no connection") {
+                $('#result-ps-u').text("Error en la conexión.");
+            }
+            $('#result-p-u').text("Error");
+            $('#result-p-u').css('color', 'red');
+        }
+    });
+}
+
 function UpdateParking() {
 
     var parking = {
@@ -165,12 +190,36 @@ function UpdateParking() {
         });
 
     }
-
-
 }
 
-function LoadVehiclesTypeDropdown() {
+function LoadVehiclesTypeDropDown() {
+    $.ajax({
+        type: "GET",
+        url: "VehicleCategory/Get",
+        data: "{}",
+        success: function (data) {
+            let dropdownHTML = '<option value="-1">Please, choose a type of vehicle</option>';
+            for (let i = 0; i < data.length; i++) {
+                dropdownHTML += '<option value="' + data[i].id + '">' + data[i].name + '</option>';
+            }
+            $('#vehicleTypeDropdown').html(dropdownHTML);
+        }
+    });
+}
 
+function LoadVehiclesTypeDropDownU() {
+    $.ajax({
+        type: "GET",
+        url: "VehicleCategory/Get",
+        data: "{}",
+        success: function (data) {
+            let dropdownHTML = '<option value="-1">Please, choose a type of vehicle</option>';
+            for (let i = 0; i < data.length; i++) {
+                dropdownHTML += '<option value="' + data[i].id + '">' + data[i].name + '</option>';
+            }
+            $('#vehicleTypeDropdown-u').html(dropdownHTML);
+        }
+    });
 }
 
 function LoadParkingsToDropdown() {
@@ -179,11 +228,26 @@ function LoadParkingsToDropdown() {
         url: "Parking/Get",
         data: "{}",
         success: function (data) {
-            let dropdownHTML = '<option value="-1">Please choose a parking</option>';
+            let dropdownHTML = '<option value="-1">Please, choose a parking</option>';
             for (let i = 0; i < data.length; i++) {
                 dropdownHTML += '<option value="' + data[i].id + '">' + data[i].name + '</option>';
             }
             $('#parkingDropdown').html(dropdownHTML);
+        }
+    });
+}
+
+function LoadParkingsToDropdownU() {
+    $.ajax({
+        type: "GET",
+        url: "Parking/Get",
+        data: "{}",
+        success: function (data) {
+            let dropdownHTML = '<option value="-1">Please, choose a parking</option>';
+            for (let i = 0; i < data.length; i++) {
+                dropdownHTML += '<option value="' + data[i].id + '">' + data[i].name + '</option>';
+            }
+            $('#parkingDropdown-u').html(dropdownHTML);
         }
     });
 }
@@ -208,7 +272,7 @@ function LoadParkingSlots() {
                 html += '<td>' + item.price + '</td>';
                 html += '<td>' + item.parking.name + '</td>';
                 /*html += '<td><a href="#parking" data-target="#modalEditParking" data-toggle="modal" onclick="GetParkingById(\'' + item.id + '\')">Edit</a> | <a href="#parking" onclick="DeleteParking(' + item.id + ')">Delete</a></td>';*/
-                html += '<td><a href="#parking" role="button" class="button" data-target="#modalEditParkingSlot" data-toggle="modal" onclick="GetParkingSlotById(\'' + item.id + '\')"><img src="/images/editar.png"></a> | <a role="button" class="button" data-target="#modalDELETEParkingSlot" data-toggle="modal"><img src="/images/borrar.png"></a></td>';
+                html += '<td><a href="#parking" role="button" class="button" data-target="#modalEditParkingSlot" data-toggle="modal" onclick="GetParkingSlotById(\'' + item.slotId + '\')"><img src="/images/editar.png"></a> | <a role="button" class="button" data-target="#modalDELETEParkingSlot" data-toggle="modal" onclick="DeleteParkingSlot(\'' + item.slotId + '\')"><img src="/images/borrar.png"></a></td>';
                 html += '</tr>';
             });
 
@@ -225,9 +289,9 @@ function LoadParkingSlots() {
 function AddParkingSlot() {
 
     var parkingSlot = {
-        type: $('#slotType').val(),
+        type: $('#vehicleTypeDropdown').val(),
         price: $('#slotPrice').val(),
-        parking: $('#parking').val(),
+        parkingId: $('#parkingDropdown').val(),
     };
 
     if (parkingSlot != null) {
@@ -241,39 +305,58 @@ function AddParkingSlot() {
             success: function (result) {
                 $('#result-p').text("Added successfully");
                 $('#result-p').css('color', 'green');
+                $('#vehicleTypeDropdown option:first').prop('selected', true);
+                $('#slotPrice').val('0');
+                $('#parkingDropdown option:first').prop('selected', true);
                 LoadParkingSlots();
             },
             error: function (errorMessage) {
-                alert("Failure!")
+                if (errorMessage === "no connection") {
+                    $('#result-p').text("Error en la conexión.");
+                }
+                $('#vehicleTypeDropdown option:first').prop('selected', true);
+                $('#slotPrice').val('0');
+                $('#parkingDropdown option:first').prop('selected', true);
             }
         });
-
+        
     }
 
 }
 
 function UpdateParkingSlot() {
-    let parkingSlot = {
-        slotId: prompt("Type an ID"),
-        state: prompt("Type a state"),
-        type: prompt("Type a type"),
-        parkingId: prompt("Type a parkingId"),
-        price: prompt("Type a price")
-    };
 
+    var parkingSlot = {
+        slotId: $('#id-ps-u').val(),
+        state: $('#slotState').val(),
+        type: $('#vehicleTypeDropdown-u').val(),
+        price: $('#slotPrice-u').val(),
+        parkingId: $('#parkingDropdown-u').val()
+    };
+    
     if (parkingSlot != null) {
 
         $.ajax({
             url: "/Parking/UpdateSlot",
-            data: JSON.stringify(parkingSlot), //converte la variable espacio de parqueo en tipo json
+            data: JSON.stringify(parkingSlot), //convierte la variable espacio de parqueo en tipo json
             type: "POST",
             contentType: "application/json;charset=utf-8",
             dataType: "json",
-            success: function (result) {
-                alert("Success!")
+            success: function (result) { 
+                $('#slotState option[value="Available"]').prop('selected', true);
+                $('#vehicleTypeDropdown option:first').prop('selected', true);
+                $('#slotPrice').val('0');
+                $('#parkingDropdown option:first').prop('selected', true);
+                LoadParkingSlots();
             },
             error: function (errorMessage) {
-                alert("Failure!")
+                if (errorMessage === "no connection") {
+                    $('#result-p').text("Error en la conexión.");
+                }
+                $('#slotState option:first').prop('selected', true);
+                $('#vehicleTypeDropdown option:first').prop('selected', true);
+                $('#slotPrice').val('0');
+                $('#parkingDropdown option:first').prop('selected', true);
             }
         });
 
@@ -282,28 +365,24 @@ function UpdateParkingSlot() {
 }
 
 function DeleteParkingSlot(id) {
-    let alert = confirm("Are you sure you want to delete the parking slot with number: " + id + "?");
-    if (alert) {
-        $.ajax({
+    //let alert = confirm("Are you sure you want to delete the parking slot with number: " + id + "?");
+    $('#btn-delete-parkingSlot').click(function () {
+        if (this.id == 'btn-delete-parkingSlot') {
+            $.ajax({
+                data: JSON.stringify(id), //convierte la variable en tipo json
+                url: "/Parking/DeleteSlot/" + id,
+                type: "DELETE",
+                contentType: "application/json;charset=utf-8",
+                dataType: "json",
+                success: function (result) {
+                    LoadParkingSlots();
+                },
+                error: function (errorMessage) {
 
-            data: JSON.stringify(id), //convierte la variable en tipo json
-            url: "/Parking/DeleteSlot/" + id,
-            type: "DELETE",
-            contentType: "application/json;charset=utf-8",
-            dataType: "json",
-            success: function (result) {
-
-                GetParkingSlot();
-            },
-            error: function (errorMessage) {
-                /*
-                if (errorMessage === "no connection") {
-                    $('#result-p').text("Error en la conexión.");
-                }*/
-            }
-        });
-
-    }
+                }
+            });
+        }
+    });
 }
 
 function ClearResultLabel() {
