@@ -131,9 +131,9 @@ namespace parking_project.Models.Data
                         SlotId = Convert.ToInt32(sqlDataReader["SlotId"]),
                         State = sqlDataReader["State"].ToString(),
                         Type = sqlDataReader["Type"].ToString(),
-                        Price = Convert.ToInt32(sqlDataReader["Price"])
+                        Price = Convert.ToInt32(sqlDataReader["Price"]),
+                        Parking = new Parking(0, sqlDataReader["ParkingName"].ToString(),null,0)
                     });
-
                 }
 
                 connection.Close();

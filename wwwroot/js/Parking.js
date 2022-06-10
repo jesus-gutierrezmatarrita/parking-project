@@ -1,7 +1,9 @@
 ﻿$(document).ready(function () {
 
     LoadParkings();
-    GetParkingSlot();
+    LoadParkingSlots();
+    LoadParkingsToDropdown();
+    LoadVehiclesTypeDropDown();
     return false;
 
 });
@@ -44,7 +46,6 @@ function AddParking() {
 
     }
 
-
 }
 
 function LoadParkings() {
@@ -55,8 +56,6 @@ function LoadParkings() {
         contentType: "application/json;charset=utf-8",
         dataType: "json",
         success: function (result) {
-
-
             var html = '';
             $.each(result, function (key, item) {
 
@@ -101,7 +100,6 @@ function DeleteParking(id) {
                 }
             }
         });
-
     }
 }
 
@@ -171,46 +169,79 @@ function UpdateParking() {
 
 }
 
-function GetParkingSlot() {
+function LoadVehiclesTypeDropdown() {
+
+}
+
+function LoadParkingsToDropdown() {
     $.ajax({
-        url: "/Parking/GetParkingSlots",
         type: "GET",
-        contentType: "application/json;charset=utf-8",
-        dataType: "json",
-        success: function (result) {
-            $.each(result, function (key, item) {
-                console.log("Slot ID: " + item.slotId);
-                console.log("State: " + item.state);
-                console.log("Type: " + item.type);
-                console.log("Price: " + item.price);
-            });
-        },
-        error: function (errorMessage) {
-            alert("Error");
-            //alert(errorMessage.responseText);
+        url: "Parking/Get",
+        data: "{}",
+        success: function (data) {
+            let dropdownHTML = '<option value="-1">Please choose a parking</option>';
+            for (let i = 0; i < data.length; i++) {
+                dropdownHTML += '<option value="' + data[i].id + '">' + data[i].name + '</option>';
+            }
+            $('#parkingDropdown').html(dropdownHTML);
         }
     });
 }
 
+function LoadParkingSlots() {
+
+    $.ajax({
+        url: "Parking/GetParkingSlots",
+        type: "GET",
+        contentType: "application/json;charset=utf-8",
+        dataType: "json",
+        success: function (result) {
+
+
+            var html = '';
+            $.each(result, function (key, item) {
+
+                html += '<tr>';
+                html += '<td>' + item.slotId + '</td>';
+                html += '<td>' + item.state + '</td>';
+                html += '<td>' + item.type + '</td>';
+                html += '<td>' + item.price + '</td>';
+                html += '<td>' + item.parking.name + '</td>';
+                /*html += '<td><a href="#parking" data-target="#modalEditParking" data-toggle="modal" onclick="GetParkingById(\'' + item.id + '\')">Edit</a> | <a href="#parking" onclick="DeleteParking(' + item.id + ')">Delete</a></td>';*/
+                html += '<td><a href="#parking" role="button" class="button" data-target="#modalEditParkingSlot" data-toggle="modal" onclick="GetParkingSlotById(\'' + item.id + '\')"><img src="/images/editar.png"></a> | <a role="button" class="button" data-target="#modalDELETEParkingSlot" data-toggle="modal"><img src="/images/borrar.png"></a></td>';
+                html += '</tr>';
+            });
+
+            $('#parkingSlots-tbody').html(html);
+            $('#parkingSlots-table').DataTable();
+        },
+        error: function (errorMessage) {
+            alert(errorMessage.responseText);
+        }
+    });
+
+}
+
 function AddParkingSlot() {
-    let parkingSlot = {
-        slotId: prompt("Type an ID"),
-        state: prompt("Type a state"),
-        type: prompt("Type a type"),
-        parkingId: prompt("Type a parkingId"),
-        price: prompt("Type a price")
+
+    var parkingSlot = {
+        type: $('#slotType').val(),
+        price: $('#slotPrice').val(),
+        parking: $('#parking').val(),
     };
 
     if (parkingSlot != null) {
 
         $.ajax({
             url: "/Parking/InsertSlot",
-            data: JSON.stringify(parkingSlot), //converte la variable espacio de parqueo en tipo json
+            data: JSON.stringify(parkingSlot), //convierte la variable espacio de parqueo en tipo json
             type: "POST",
             contentType: "application/json;charset=utf-8",
             dataType: "json",
             success: function (result) {
-                alert("Success!")
+                $('#result-p').text("Added successfully");
+                $('#result-p').css('color', 'green');
+                LoadParkingSlots();
             },
             error: function (errorMessage) {
                 alert("Failure!")

@@ -66,6 +66,7 @@
                     </a>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                                 <h5 id="dropM" role="button" class="dropdown-item" data-target="#modalParking" data-toggle="modal">Parking</h5>
+                                <h5 id="dropM" role="button" class="dropdown-item" data-target="#modalParkingSlot" data-toggle="modal">Parking Slot</h5>
                                 <h5 id="dropM" role="button" class="dropdown-item" data-target="#modalUser" data-toggle="modal">User</h5>
                                 <h5 id="dropM" role="button" class="dropdown-item" data-target="#modalRole" data-toggle="modal">Role</h5>
                                 <h5 id="dropM" role="button" class="dropdown-item" data-target="#modalFare" data-toggle="modal">Fare</h5>
@@ -383,6 +384,149 @@
             </div>
         </div>
     </section>
+
+    <!-- PARKING SLOTS-->
+    <section id="parkingSlots">
+        <div class="container">
+            <div class="row">
+                <div class="section-title">
+                    <h2>Parking Slots</h2>
+                </div>
+
+                <div class="col-md-12 col-sm-12">
+
+                    <div class="table-responsive">
+
+                        <table class="table .table-striped .table-dark" id="parkingSlots-table">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        ID
+                                    </th>
+                                    <th>
+                                        State
+                                    </th>
+                                    <th>
+                                        Type
+                                    </th>
+                                    <th>
+                                        Price
+                                    </th>
+                                    <th>
+                                        Parking
+                                    </th>
+                                    <th>
+                                        Action
+                                    </th>
+
+
+                                </tr>
+
+                            </thead>
+
+                            <tbody id="parkingSlots-tbody">
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal fade" id="modalParkingSlot" role="dialog" aria-hidden="true" tabindex="-1">
+        <div class="modal-dialog ">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h3 id="modalLabelSlot">Add Parking Slot</h3>
+                </div>
+
+                <!-- Modal Body -->
+
+
+                <div class="modal-body">
+                    <form action="" id="">
+                        <div class="form-group">
+                            <select class="form-control" id="vehicle-type-dropdown" name="vehicle-type-dropdown" required>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Price</label>
+                             <input type="number" name="price" id="price" class="form-control" min="0" step="5" value="0" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Parking</label>
+                            <select class="form-control" id="parkingDropdown" name="parkingDropdown" required>
+                            </select>
+                        </div>
+
+                    </form>
+                </div>
+
+                <!-- Modal Footer-->
+
+                <div class="modal-footer">
+                    <label id="result-p"></label>
+                    <button type="submit" class="btn btn-info" onclick= "AddParking()" id="btn-add-parking">Add</button>
+                    <button type="button" class="btn btn-danger" onclick= "ClearResultLabel()" data-dismiss="modal">Close</button>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalEditParking" role="dialog" aria-hidden="true" tabindex="-1">
+        <div class="modal-dialog ">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h3 id="myModalLabel">Edit Parking Lot</h3>
+                </div>
+
+                <!-- Modal Body -->
+
+
+                <div class="modal-body">
+                    <form action="" id="">
+                        <div class="form-group">
+                            <input type="text" name="id" id="id-p-u" hidden>
+                        </div>
+                        <div class="form-group">
+                            <!-- Datos de la BD -->
+                            <label>Name</label>
+                             <input type="text" name="nameParking" id="nameParking-u" class="form-control" required="">
+                        </div>
+                        <div class="form-group">
+                            <label>Location</label>
+                             <input type="text" name="location" id="location-u" class="form-control" required="">
+                        </div>
+                        <div class="form-group">
+                            <label>Capacity</label>
+                             <input type="number" name="capacity" id="capacity-u" class="form-control" required="">
+                        </div>
+
+                    </form>
+                </div>
+
+                <!-- Modal Footer-->
+
+                <div class="modal-footer">
+                    <label id="result-p-u"></label>
+                    <button type="submit" class="btn btn-info" onclick= "return UpdateParking();" id="btn-update-parking">Save</button>
+                    <button type="button" class="btn btn-danger" onclick= "ClearResultLabel()" data-dismiss="modal">Close</button>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
 
     <!-- Modal DELETE PARKING -->
     <div class="modal fade" id="modalDELETEParking" role="dialog" aria-hidden="true" tabindex="-1">
