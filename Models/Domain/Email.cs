@@ -1,18 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Net;
-using System.Net.Mail;
-using System.Configuration;
-using System.IO;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-
-namespace parking_project.Models.Domain
+﻿namespace parking_project.Models.Domain
 {
     public class Email
-    {
+    {/*
         public void SendEmail(String to, String subject, String body)
         {
             System.Net.Mail.MailMessage mmsg = new System.Net.Mail.MailMessage();
@@ -45,7 +34,7 @@ namespace parking_project.Models.Domain
         }
 
 
-
+        /*
         private string CreateBody(String msg)
         {
             string body = string.Empty;
@@ -63,6 +52,6 @@ namespace parking_project.Models.Domain
 
             return body;
 
-        }
+        }*/
     }
 }

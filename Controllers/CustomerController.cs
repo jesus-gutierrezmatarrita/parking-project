@@ -36,8 +36,8 @@ namespace parking_project.Controllers
             {
              
                 int resultToReturn = customerDAO.Insert(customer);
-                email.SendEmail(customer.Email, "Nuevo Usuario", customer.Name + " " + customer.Lastname +
-", ha sido añadido satisfactoriamente. ");
+                //email.SendEmail(customer.Email, "Nuevo Usuario", customer.Name + " " + customer.Lastname +
+//", ha sido añadido satisfactoriamente. ");
                 return Ok(resultToReturn);
 
             }
