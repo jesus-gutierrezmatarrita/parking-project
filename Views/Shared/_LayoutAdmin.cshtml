@@ -239,7 +239,8 @@
                 <!-- Modal Footer-->
 
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-info" onsubmit="" id="">Add</button>
+                    <label id="result-c"></label>
+                    <button type="submit" class="btn btn-info" onclick="return Add();" id="">Add</button>
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
                 </div>
 
@@ -661,6 +662,7 @@
                                 <!-- Modal Footer-->
 
                                 <div class="modal-footer">
+                                    <label id="result-c-u"></label>
                                     <button type="submit" class="btn btn-success" onclick= "return UpdateCustomer();">Update</button>
                                     <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
                                 </div>
@@ -854,10 +856,10 @@
                                 <tr>
 
                                     <th>
-                                        Lisence Plate
+                                        License Plate
                                     </th>
                                     <th>
-                                        Trademark
+                                        Brand
                                     </th>
                                     <th>
                                         Model
@@ -1178,15 +1180,9 @@
 
                         <div class="form-group">
                             <div class="dropdown">
-                                <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" id="dropdownVehicle">
-                                    Type ▼
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="dropdownVehicle">
-                                    <li><a href="#">Car</a></li>
-                                    <li><a href="#">Motorcycle</a></li>
-                                    <li><a href="#">Bike</a></li>
-                                    <li><a href="#">Heavy-duty Vehicle</a></li>
-                                </ul>
+                                <select class="form-control without-margin" name="vehicle-type" id="vehicle-type">
+                                        <option value="0" selected>Vehicle type</option>
+                                    </select>
                             </div>
                           </div> 
                           
@@ -1195,7 +1191,7 @@
                             <input type="text" name="licensePlate" id="licensePlate" class="form-control" required="">
                             </div>
                         <div class="form-group">
-                            <label>Trademark Car</label>
+                            <label>Car Brand</label>
                             <input type="text" name="trademark" id="trademark" class="form-control" required="">
                         </div>
 
@@ -1216,7 +1212,7 @@
                 <!-- Modal Footer-->
 
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-info" onsubmit="" id="">Add</button>
+                    <button type="submit" class="btn btn-info" onclick= "return AddVehicle();" id="">Add</button>
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
                 </div>
 
@@ -1273,6 +1269,7 @@
     <script src="js/Customer.js"></script>
     <script src="js/Parking.js"></script>
     <script src="js/Role.js"></script>
+    <script src="js/Vehicle.js"></script>
     <script src="bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src = "https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>

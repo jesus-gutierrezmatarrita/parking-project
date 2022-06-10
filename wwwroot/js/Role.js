@@ -58,7 +58,7 @@ function LoadRoles() {
                 html += '<td>' + item.id + '</td>';
                 html += '<td>' + item.name + '</td>';
                 /*html += '<td><a href="#role" data-target="#modalRole" data-toggle="modal" onclick="GetRoleById(\'' + item.id + '\')">Edit</a> | <a href="#role" onclick="DeleteRole(' + item.id + ')">Delete</a></td>';*/
-                html += '<td><a href="#role" class="button" data-target="#modalUpdateRole" data-toggle="modal" onclick="GetRoleById(\'' + item.id + '\')"><img src="/images/editar.png"></a> | <a role="button" class="button" onclick="DeleteRole(' + item.id + ')"><img src="/images/borrar.png"></a></td>';
+                html += '<td><a href="#role" class="button" data-target="#modalUpdateRole" data-toggle="modal" onclick="GetRoleById(\'' + item.id + '\')"><img src="/images/editar.png"></a> | <a role="button" class="button" data-target="#modalDELETERole" data-toggle="modal" onclick="DeleteRole(' + item.id + ')"><img src="/images/borrar.png"></a></td>';
                 html += '</tr>';
             });
 
@@ -74,35 +74,29 @@ function LoadRoles() {
 }
 
 function DeleteRole(id) {
-    var alert = confirm("Are you sure you want to delete this record?");
-    
-    /*var btnModal = $('#btn-delete-role');
-    $('#modalDELETERole').show();
-    btnModal.click(function (event) {
-        if (event.target == modal) {
+    //var alert = confirm("Are you sure you want to delete this record?");
+    $('#btn-delete-role').click(function () {
+        if (this.id == 'btn-delete-role') {
+            $.ajax({
+
+                data: JSON.stringify(id), //convierte la variable en tipo json
+                url: "/Role/Delete/" + id,
+                type: "DELETE",
+                contentType: "application/json;charset=utf-8",
+                dataType: "json",
+                success: function (result) {
+
+                    LoadRoles();
+                },
+                error: function (errorMessage) {
+                    if (errorMessage === "no connection") {
+                        $('#result-r').text("Error en la conexión.");
+                    }
+                }
+            });
 
         }
-    })*/
-    if (alert) {
-        $.ajax({
-
-            data: JSON.stringify(id), //convierte la variable en tipo json
-            url: "/Role/Delete/" + id,
-            type: "DELETE",
-            contentType: "application/json;charset=utf-8",
-            dataType: "json",
-            success: function (result) {
-
-                LoadRoles();
-            },
-            error: function (errorMessage) {
-                if (errorMessage === "no connection") {
-                    $('#result-r').text("Error en la conexión.");
-                }
-            }
-        });
-
-    }
+    });
 }
 
 function GetRoleById(idRole) {
